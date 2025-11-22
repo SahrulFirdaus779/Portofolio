@@ -1,0 +1,1679 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahrul Firdaus - Data Enthusiast Portfolio | Machine Learning Specialist</title>
+  <meta name="description" content="Sahrul Firdaus - Aspiring Data Analyst with expertise in Machine Learning, Python, and Data Visualization. Available for internship opportunities.">
+  <meta name="keywords" content="Data Analyst, Machine Learning, Python, Data Science, Portfolio, Internship, Analytics"><!-- Open Graph -->
+  <meta property="og:title" content="Sahrul Firdaus - Data Analyst Portfolio">
+  <meta property="og:description" content="Turning raw data into meaningful decisions through analysis, visualization, and storytelling.">
+  <meta property="og:type" content="website"><!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sahrul Firdaus",
+    "jobTitle": "Data Enthusiast",
+    "description": "Data Analyst with knowledge in Machine Learning",
+    "url": "https://sahrulfirdaus.com"
+  }
+  </script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><!-- Google Fonts - Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      scroll-behavior: smooth;
+      font-family: "Poppins", sans-serif;
+    }
+
+    :root {
+      --cream-bg: #FFFFFF;
+      --cream-light: #F9FAFB;
+      --champagne: #F3F4F6;
+      --border-color: #E5E7EB;
+      --blue-primary: #2563EB;
+      --blue-dark: #1E40AF;
+      --blue-light: #DBEAFE;
+      --blue-hover: #1D4ED8;
+      --text-dark: #111827;
+      --text-secondary: #6B7280;
+      --text-muted: #9CA3AF;
+    }
+
+    /* Typography System with Poppins */
+    body {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--text-dark);
+    }
+
+    h1, h2 {
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--text-dark);
+      letter-spacing: -0.02em;
+    }
+
+    h3, h4 {
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--text-dark);
+    }
+
+    h5, h6 {
+      font-weight: 500;
+      line-height: 1.4;
+      color: var(--text-dark);
+    }
+
+    p, li, span {
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+
+    small, .text-sm, .text-xs {
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    button, .btn-primary, .btn-secondary {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    a {
+      font-family: "Poppins", sans-serif;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    body.dark-mode {
+      --cream-bg: #1a1a1a;
+      --cream-light: #2a2a2a;
+      --text-dark: #f5f5f5;
+      --text-secondary: #d1d1d1;
+      --text-muted: #a1a1a1;
+    }
+
+    .gradient-text {
+      color: var(--blue-primary);
+      font-weight: 700;
+    }
+
+    .data-pattern {
+      background: transparent;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      animation: fadeInUp 0.6s ease-out forwards;
+      opacity: 0;
+    }
+
+    .fade-in-delay-1 { animation-delay: 0.1s; }
+    .fade-in-delay-2 { animation-delay: 0.2s; }
+    .fade-in-delay-3 { animation-delay: 0.3s; }
+
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px -8px rgba(37, 99, 235, 0.12);
+    }
+
+    .btn-primary {
+      background: var(--blue-primary);
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--blue-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px -4px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-secondary {
+      background: var(--blue-dark);
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--blue-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px -4px rgba(37, 99, 235, 0.3);
+    }
+
+    .skill-badge {
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .skill-badge:hover {
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 4px 8px -2px rgba(37, 99, 235, 0.2);
+    }
+
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--blue-primary);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      z-index: 9999;
+      overflow-y: auto;
+      backdrop-filter: blur(4px);
+    }
+
+    .modal.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-content {
+      background: var(--cream-light);
+      border-radius: 16px;
+      max-width: 900px;
+      width: 100%;
+      max-height: 90%;
+      overflow-y: auto;
+      animation: modalSlideUp 0.4s ease-out;
+      box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    @keyframes modalSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .carousel {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--blue-primary) 0%, var(--blue-dark) 100%);
+    }
+
+    .carousel-item {
+      display: none;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel-item.active {
+      display: flex;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: white;
+      padding: 16px 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px -4px rgba(0,0,0,0.15);
+      z-index: 10000;
+      display: none;
+      animation: toastSlide 0.3s ease-out;
+    }
+
+    @keyframes toastSlide {
+      from {
+        transform: translateX(400px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .toast.success {
+      border-left: 4px solid #10b981;
+    }
+
+    .toast.error {
+      border-left: 4px solid #ef4444;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 40px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--blue-primary);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 30px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -46px;
+      top: 0;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--blue-primary);
+      border: 3px solid var(--cream-bg);
+      box-shadow: 0 0 0 3px var(--blue-light);
+    }
+
+    .stat-card {
+      background: white;
+      border: 1px solid var(--border-color);
+    }
+
+    .section-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border-color);
+      margin: 60px 0;
+      opacity: 0.5;
+    }
+
+    /* Loading Skeleton Styles */
+    .skeleton {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: skeletonLoading 1.5s ease-in-out infinite;
+      border-radius: 8px;
+    }
+
+    @keyframes skeletonLoading {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    .skeleton-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--border-color);
+    }
+
+    .skeleton-header {
+      height: 200px;
+      background: linear-gradient(90deg, var(--blue-light) 25%, #BFDBFE 50%, var(--blue-light) 75%);
+      background-size: 200% 100%;
+      animation: skeletonLoading 1.5s ease-in-out infinite;
+    }
+
+    .skeleton-text {
+      height: 14px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+    }
+
+    .skeleton-title {
+      height: 20px;
+      width: 70%;
+      margin-bottom: 14px;
+      border-radius: 4px;
+    }
+
+    .skeleton-badge {
+      height: 24px;
+      width: 70px;
+      border-radius: 12px;
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    .skeleton-button {
+      height: 44px;
+      border-radius: 12px;
+      margin-top: 10px;
+    }
+
+    /* Smooth Language Transition */
+    [data-en], [data-id] {
+      transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+    }
+
+    .lang-transitioning {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+
+    @keyframes fadeInText {
+      0% {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Parallax Effect */
+    .parallax-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .parallax-layer {
+      transition: transform 0.05s ease-out;
+      will-change: transform;
+    }
+
+    .parallax-bg-element {
+      display: none;
+    }
+
+    /* Enhanced shadows */
+    .shadow-subtle {
+      box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.08);
+    }
+
+    .shadow-medium {
+      box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.1);
+    }
+
+    .shadow-elevated {
+      box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.15);
+    }
+
+    .profile-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .carousel {
+        height: 300px;
+      }
+      
+      .modal-content {
+        margin: 20px;
+      }
+      
+      .parallax-layer {
+        transform: none !important;
+      }
+
+      h1 {
+        font-size: 2.5rem !important;
+      }
+
+      h2 {
+        font-size: 2rem !important;
+      }
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="bg-cream-bg text-gray-800"><!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-white bg-opacity-98 backdrop-blur-md shadow-sm z-50 transition-all duration-300 border-b border-gray-100">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16"><a href="#home" class="text-2xl font-bold gradient-text">SAFIER</a>
+     <div class="hidden md:flex items-center space-x-8"><a href="#home" class="nav-link text-gray-700 font-medium hover:text-blue-600" data-en="Home" data-id="Beranda">Home</a> <a href="#about" class="nav-link text-gray-700 font-medium hover:text-blue-600" data-en="About" data-id="Tentang">About</a> <a href="#skills" class="nav-link text-gray-700 font-medium hover:text-blue-600" data-en="Skills" data-id="Keahlian">Skills</a> <a href="#portfolio" class="nav-link text-gray-700 font-medium hover:text-blue-600" data-en="Portfolio" data-id="Portofolio">Portfolio</a> <a href="#experience" class="nav-link text-gray-700 font-medium hover:text-blue-600" data-en="Experience" data-id="Pengalaman">Experience</a> <a href="#certificates" class="nav-link text-gray-700 font-medium hover:text-blue-600" data-en="Certificates" data-id="Sertifikat">Certificates</a> <a href="#contact" class="nav-link text-gray-700 font-medium hover:text-blue-600" data-en="Contact" data-id="Kontak">Contact</a>
+     </div>
+     <div class="flex items-center space-x-3"><button id="langToggle" class="px-3 py-1.5 text-sm font-medium text-gray-700 border border-gray-300 rounded-full hover:bg-gray-50 hover:border-blue-300 transition-all"> EN </button> <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-100 transition-all"> <i class="fas fa-moon text-gray-700"></i> </button> <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100"> <i class="fas fa-bars text-gray-700"></i> </button>
+     </div>
+    </div>
+   </div><!-- Mobile Menu -->
+   <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200">
+    <div class="px-4 py-3 space-y-3"><a href="#home" class="block text-gray-700 font-medium hover:text-blue-600" data-en="Home" data-id="Beranda">Home</a> <a href="#about" class="block text-gray-700 font-medium hover:text-blue-600" data-en="About" data-id="Tentang">About</a> <a href="#skills" class="block text-gray-700 font-medium hover:text-blue-600" data-en="Skills" data-id="Keahlian">Skills</a> <a href="#portfolio" class="block text-gray-700 font-medium hover:text-blue-600" data-en="Portfolio" data-id="Portofolio">Portfolio</a> <a href="#experience" class="block text-gray-700 font-medium hover:text-blue-600" data-en="Experience" data-id="Pengalaman">Experience</a> <a href="#certificates" class="block text-gray-700 font-medium hover:text-blue-600" data-en="Certificates" data-id="Sertifikat">Certificates</a> <a href="#contact" class="block text-gray-700 font-medium hover:text-blue-600" data-en="Contact" data-id="Kontak">Contact</a>
+    </div>
+   </div>
+  </nav><!-- Hero Section with Subtle Gradient -->
+  <section id="home" class="parallax-container min-h-screen flex items-center justify-center pt-16" style="background: linear-gradient(180deg, #FFFFFF 0%, #F9FAFB 100%);">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+     <div class="fade-in parallax-layer">
+      <div class="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-100 rounded-full mb-6"><span class="w-2 h-2 bg-blue-600 rounded-full mr-2 animate-pulse"></span> <span class="text-sm font-medium text-blue-700" data-en="Available for Internship" data-id="Terbuka untuk Magang">Available for Internship</span>
+      </div>
+      <h1 id="heroName" class="text-5xl md:text-6xl font-bold text-gray-900 mb-4 tracking-tight">Sahrul Firdaus</h1>
+      <div class="flex items-center gap-3 mb-6">
+       <div class="h-1 w-12 bg-blue-600 rounded"></div>
+       <p id="heroRole" class="text-xl md:text-2xl font-semibold text-gray-700" data-en="Aspiring Data Analyst" data-id=" Penggemar Data">Data Enthusiast</p>
+      </div>
+      <p id="heroTagline" class="text-2xl md:text-3xl gradient-text font-bold mb-6">Think, Learn, Do It</p>
+      <p id="heroValueStatement" class="text-lg text-gray-600 mb-8 leading-relaxed" data-en="Turning raw data into meaningful decisions through analysis, visualization, and storytelling." data-id="Mengubah data mentah menjadi keputusan bermakna melalui analisis, visualisasi, dan storytelling.">Turning raw data into meaningful decisions through analysis, visualization, and storytelling.</p>
+      <div class="flex flex-wrap gap-4 mb-8"><a href="#portfolio" class="btn-primary px-7 py-3.5 rounded-xl font-semibold shadow-subtle text-white">
+        <svg class="w-5 h-5 inline-block mr-2 -mt-1 text-white" fill="currentColor" viewbox="0 0 20 20"><path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z" />
+        </svg><span class="text-white" data-en="View Projects" data-id="Lihat Proyek">View Projects</span> </a> <a href="https://drive.google.com/uc?export=download&amp;id=12a7dJC-4Mof9ct6-Ksv_lLyOi9qXa03e" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 bg-white text-gray-700 rounded-xl font-semibold border border-gray-300 hover:border-blue-400 hover:text-blue-600 transition-all shadow-subtle">
+        <svg class="w-5 h-5 inline-block mr-2 -mt-1" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+        </svg><span data-en="Download CV" data-id="Unduh CV">Download CV</span> </a> <a href="#contact" class="btn-secondary px-7 py-3.5 rounded-xl font-semibold shadow-subtle text-white">
+        <svg class="w-5 h-5 inline-block mr-2 -mt-1 text-white" fill="currentColor" viewbox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /> <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+        </svg><span class="text-white" data-en="Contact Me" data-id="Hubungi Saya">Contact Me</span> </a>
+      </div>
+      <div class="flex gap-3"><a href="https://github.com/SahrulFirdaus779" target="_blank" rel="noopener noreferrer" class="w-11 h-11 bg-white rounded-full shadow-subtle flex items-center justify-center hover:shadow-medium hover:scale-105 transition-all border border-gray-200">
+        <svg class="w-5 h-5 text-gray-700" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+        </svg></a> <a href="https://www.linkedin.com/in/sahrul-firdaus/" target="_blank" rel="noopener noreferrer" class="w-11 h-11 bg-white rounded-full shadow-subtle flex items-center justify-center hover:shadow-medium hover:scale-105 transition-all border border-gray-200">
+        <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewbox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+        </svg></a> <a href="mailto:muhammadsyahrulfirdaus22@gmail.com" class="w-11 h-11 bg-white rounded-full shadow-subtle flex items-center justify-center hover:shadow-medium hover:scale-105 transition-all border border-gray-200">
+        <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewbox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /> <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+        </svg></a> <a href="https://wa.me/62089527509633" target="_blank" rel="noopener noreferrer" class="w-11 h-11 bg-white rounded-full shadow-subtle flex items-center justify-center hover:shadow-medium hover:scale-105 transition-all border border-gray-200">
+        <svg class="w-5 h-5 text-green-600" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg></a>
+      </div>
+     </div>
+     <div class="relative fade-in-delay-1 parallax-layer">
+      <div class="relative z-10">
+       <div class="w-full max-w-lg mx-auto aspect-square rounded-2xl p-8 shadow-subtle border border-gray-200" style="background: #FFFFFF;">
+        <div class="w-full h-full rounded-xl bg-gradient-to-br from-blue-50 to-white flex items-center justify-center border border-blue-100">
+         <svg viewbox="0 0 400 400" class="w-full h-full"><!-- Background circles --> <circle cx="200" cy="200" r="180" fill="#2563EB" opacity="0.04" /> <circle cx="200" cy="200" r="140" fill="#2563EB" opacity="0.06" /> <!-- Data visualization --> <g opacity="0.9">
+           <rect x="70" y="250" width="30" height="100" fill="#2563EB" rx="4" />
+           <rect x="110" y="220" width="30" height="130" fill="#3B82F6" rx="4" />
+           <rect x="150" y="180" width="30" height="170" fill="#2563EB" rx="4" />
+           <rect x="190" y="200" width="30" height="150" fill="#3B82F6" rx="4" />
+           <rect x="230" y="160" width="30" height="190" fill="#2563EB" rx="4" />
+           <rect x="270" y="190" width="30" height="160" fill="#3B82F6" rx="4" />
+           <rect x="310" y="230" width="30" height="120" fill="#2563EB" rx="4" />
+          </g> <!-- Trend line --> <polyline points="85,275 125,245 165,185 205,215 245,175 285,205 325,245" fill="none" stroke="#1E40AF" stroke-width="3" opacity="0.7" /> <!-- Data points --> <circle cx="85" cy="275" r="5" fill="#1E40AF" /> <circle cx="125" cy="245" r="5" fill="#1E40AF" /> <circle cx="165" cy="185" r="5" fill="#1E40AF" /> <circle cx="205" cy="215" r="5" fill="#1E40AF" /> <circle cx="245" cy="175" r="5" fill="#1E40AF" /> <circle cx="285" cy="205" r="5" fill="#1E40AF" /> <circle cx="325" cy="245" r="5" fill="#1E40AF" /> <!-- Center icon --> <circle cx="200" cy="120" r="40" fill="white" stroke="#2563EB" stroke-width="3" /> <text x="200" y="135" font-size="40" text-anchor="middle" fill="#2563EB">
+           📊
+          </text>
+         </svg>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <div class="section-divider"></div><!-- About Section -->
+  <section id="about" class="py-20 bg-white">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 fade-in">
+     <h2 id="aboutTitle" class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-en="About Me" data-id="Tentang Saya">About Me</h2>
+     <div class="w-20 h-1 bg-blue-600 mx-auto rounded"></div>
+    </div>
+    <div class="max-w-5xl mx-auto"><!-- Photo Profile Section -->
+     <div class="flex justify-center mb-12 fade-in">
+      <div class="relative">
+       <div class="w-56 h-56 rounded-2xl p-1.5 shadow-medium border border-blue-200" style="background: linear-gradient(135deg, #DBEAFE, #BFDBFE);">
+        <div id="profilePhotoContainer" class="w-full h-full rounded-xl bg-white flex items-center justify-center overflow-hidden"><img src="assets/img/Sahrul_Firdaus.jpg" alt="Sahrul Firdaus - Data Analyst" class="profile-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+         <div style="display:none;" class="text-center p-4">
+          <svg class="w-20 h-20 text-gray-300 mx-auto mb-2" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+          </svg>
+          <p class="text-gray-400 text-sm font-medium">Sahrul Firdaus</p>
+         </div>
+        </div>
+       </div><!-- Decorative elements -->
+       <div class="absolute -top-3 -right-3 w-12 h-12 rounded-full opacity-40 blur-xl" style="background: #3B82F6;"></div>
+       <div class="absolute -bottom-3 -left-3 w-16 h-16 rounded-full opacity-40 blur-xl" style="background: #2563EB;"></div>
+      </div>
+     </div>
+     <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="stat-card rounded-2xl p-6 text-center fade-in-delay-1 shadow-subtle">
+       <div class="text-4xl font-bold gradient-text mb-2">
+        3+
+       </div>
+       <div class="text-gray-600 font-medium text-sm" data-en="Real Projects" data-id="Proyek Nyata">
+        Real Projects
+       </div>
+      </div>
+      <div class="stat-card rounded-2xl p-6 text-center fade-in-delay-2 shadow-subtle">
+       <div class="text-4xl font-bold gradient-text mb-2">
+        10+
+       </div>
+       <div class="text-gray-600 font-medium text-sm" data-en="Tools Mastered" data-id="Tools Dikuasai">
+        Tools Mastered
+       </div>
+      </div>
+      <div class="stat-card rounded-2xl p-6 text-center fade-in-delay-3 shadow-subtle">
+       <div class="text-4xl font-bold gradient-text mb-2">
+        100%
+       </div>
+       <div class="text-gray-600 font-medium text-sm" data-en="Dedicated" data-id="Dedikasi">
+        Dedicated
+       </div>
+      </div>
+     </div>
+     <div class="bg-gray-50 rounded-2xl p-8 md:p-10 shadow-subtle border border-gray-100 fade-in">
+      <div class="prose max-w-none">
+       <p class="text-base text-gray-700 leading-relaxed mb-5" data-en="My journey with data began with a simple curiosity: What stories hide behind the numbers? This question led me down a path of discovery where every dataset became a mystery waiting to be solved, and every insight felt like unlocking a secret door to better decision-making." data-id="Perjalanan saya dengan data dimulai dari rasa ingin tahu sederhana: Cerita apa yang tersembunyi di balik angka-angka? Pertanyaan ini membawa saya ke jalur penemuan di mana setiap dataset menjadi misteri yang menunggu dipecahkan, dan setiap insight terasa seperti membuka pintu rahasia untuk pengambilan keputusan yang lebih baik.">My journey with data began with a simple curiosity: <strong>What stories hide behind the numbers?</strong> This question led me down a path of discovery where every dataset became a mystery waiting to be solved, and every insight felt like unlocking a secret door to better decision-making.</p>
+       <p class="text-base text-gray-700 leading-relaxed mb-5" data-en="I believe that data analysis is not just about crunching numbers—it's about understanding context, asking the right questions, and translating complex patterns into actionable insights that people can actually use. Whether it's identifying sales trends in retail data, analyzing social phenomena through statistics, or forecasting disasters to save lives, I approach every project with the mindset that every dataset has a story worth telling." data-id="Saya percaya bahwa analisis data bukan hanya tentang mengolah angka—ini tentang memahami konteks, mengajukan pertanyaan yang tepat, dan menerjemahkan pola kompleks menjadi insight yang dapat ditindaklanjuti yang benar-benar dapat digunakan orang. Baik mengidentifikasi tren penjualan dalam data ritel, menganalisis fenomena sosial melalui statistik, atau memprediksi bencana untuk menyelamatkan nyawa, saya mendekati setiap proyek dengan pola pikir bahwa setiap dataset memiliki cerita yang layak diceritakan.">I believe that data analysis is not just about crunching numbers—it's about <strong>understanding context, asking the right questions</strong>, and translating complex patterns into actionable insights that people can actually use. Whether it's identifying sales trends in retail data, analyzing social phenomena through statistics, or forecasting disasters to save lives, I approach every project with the mindset that <strong>every dataset has a story worth telling</strong>.</p>
+       <p class="text-base text-gray-700 leading-relaxed mb-5" data-en="My philosophy is captured in three words: Think, Learn, Do It. I think critically about problems before diving into solutions. I learn continuously from every project, every mistake, and every breakthrough. And most importantly, I do it—I take action, build solutions, and deliver results. This isn't just a tagline; it's how I approach every challenge in data science and life." data-id="Filosofi saya terangkum dalam tiga kata: Think, Learn, Do It. Saya berpikir kritis tentang masalah sebelum terjun ke solusi. Saya belajar terus-menerus dari setiap proyek, setiap kesalahan, dan setiap terobosan. Dan yang paling penting, saya melakukannya—saya mengambil tindakan, membangun solusi, dan memberikan hasil. Ini bukan hanya tagline; ini bagaimana saya mendekati setiap tantangan dalam ilmu data dan kehidupan.">My philosophy is captured in three words: <strong>Think, Learn, Do It</strong>. I think critically about problems before diving into solutions. I learn continuously from every project, every mistake, and every breakthrough. And most importantly, I do it—I take action, build solutions, and deliver results. This isn't just a tagline; it's how I approach every challenge in data science and life.</p>
+       <p class="text-base text-gray-700 leading-relaxed" data-en="Right now, I'm actively seeking internship opportunities in Data Analytics and Machine Learning where I can contribute fresh perspectives, bring data-driven solutions to real business problems, and grow alongside experienced professionals. I want to be part of a team that values curiosity, embraces data as a strategic asset, and believes in the power of storytelling through analytics. If you're looking for someone who combines technical skills with genuine passion for turning data into impact, I'd love to connect." data-id="Saat ini, saya secara aktif mencari peluang magang dalam Analitik Data dan Pembelajaran Mesin di mana saya dapat berkontribusi dengan perspektif segar, membawa solusi berbasis data untuk masalah bisnis nyata, dan berkembang bersama profesional berpengalaman. Saya ingin menjadi bagian dari tim yang menghargai rasa ingin tahu, merangkul data sebagai aset strategis, dan percaya pada kekuatan storytelling melalui analitik. Jika Anda mencari seseorang yang menggabungkan keterampilan teknis dengan passion asli untuk mengubah data menjadi dampak, saya ingin terhubung.">Right now, I'm actively seeking <strong>internship opportunities in Data Analytics and Machine Learning</strong> where I can contribute fresh perspectives, bring data-driven solutions to real business problems, and grow alongside experienced professionals. I want to be part of a team that values curiosity, embraces data as a strategic asset, and believes in the power of storytelling through analytics. If you're looking for someone who combines technical skills with genuine passion for turning data into impact, I'd love to connect.</p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <div class="section-divider"></div><!-- Skills Section -->
+  <section id="skills" class="py-20 bg-gray-50">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 fade-in">
+     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-en="Skills &amp; Expertise" data-id="Keahlian &amp; Expertise">Skills &amp; Expertise</h2>
+     <div class="w-20 h-1 bg-blue-600 mx-auto rounded"></div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6"><!-- Core Skills -->
+     <div class="bg-white rounded-2xl p-8 shadow-subtle border border-gray-100 card-hover fade-in-delay-1">
+      <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-5 shadow-subtle">
+       <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+       </svg>
+      </div>
+      <h3 class="text-xl font-bold text-gray-900 mb-4" data-en="Core Skills" data-id="Keahlian Inti">Core Skills</h3>
+      <div class="flex flex-wrap gap-2"><span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Data Analysis</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Data Science</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Machine Learning</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Analytical Skills</span><span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Data Mining</span><span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Communication</span>
+      </div>
+     </div><!-- Tools & Tech -->
+     <div class="bg-white rounded-2xl p-8 shadow-subtle border border-gray-100 card-hover fade-in-delay-2">
+      <div class="w-14 h-14 bg-blue-700 rounded-xl flex items-center justify-center mb-5 shadow-subtle">
+       <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+       </svg>
+      </div>
+      <h3 class="text-xl font-bold text-gray-900 mb-4" data-en="Tools &amp; Technologies" data-id="Tools &amp; Teknologi">Tools &amp; Technologies</h3>
+      <div class="flex flex-wrap gap-2"><span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Python</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Excel/Spreadsheet</span> 
+         <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Git</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">SQL</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Spreadsheet</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">KNIME</span>  <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Lookerstudio</span>  <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Colab</span>  <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Power BI</span>  <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Tableau</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">NumPy</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Scikit-Learn</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Matplotlib</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Seaborn</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Plotly</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Streamlit</span>
+      </div>
+     </div><!-- Soft Skills -->
+     <div class="bg-white rounded-2xl p-8 shadow-subtle border border-gray-100 card-hover fade-in-delay-3">
+      <div class="w-14 h-14 bg-blue-800 rounded-xl flex items-center justify-center mb-5 shadow-subtle">
+       <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+       </svg>
+      </div>
+      <h3 class="text-xl font-bold text-gray-900 mb-4" data-en="Soft Skills" data-id="Soft Skills">Soft Skills</h3>
+      <div class="flex flex-wrap gap-2"><span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Critical Thinking</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Communication</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Storytelling</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Leadership</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Report Writing</span><span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Collaboration</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Problem Solving</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <div class="section-divider"></div><!-- Portfolio Section -->
+  <section id="portfolio" class="py-20 bg-white">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 fade-in">
+     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-en="Featured Projects" data-id="Proyek Unggulan">Featured Projects</h2>
+     <div class="w-20 h-1 bg-blue-600 mx-auto rounded mb-3"></div>
+     <p class="text-base text-gray-600 max-w-3xl mx-auto" data-en="Real-world data projects showcasing analytical thinking, technical skills, and storytelling ability" data-id="Proyek data dunia nyata yang menampilkan pemikiran analitis, keterampilan teknis, dan kemampuan storytelling">Real-world data projects showcasing analytical thinking, technical skills, and storytelling ability</p>
+    </div>
+    <div id="projectsContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"><!-- Loading Skeletons will be shown here initially -->
+    </div>
+    <div id="projectsViewMore" class="text-center mt-10 hidden"><button onclick="toggleProjectsView()" class="px-8 py-3.5 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-subtle hover:shadow-medium hover:scale-105"> <i class="fas fa-plus-circle mr-2 text-white"></i> <span class="text-white" data-en="View More Projects" data-id="Lihat Lebih Banyak Proyek">View More Projects</span> </button>
+    </div>
+    <div id="projectsViewLess" class="text-center mt-10 hidden"><button onclick="toggleProjectsView()" class="px-8 py-3.5 bg-gray-600 text-white rounded-xl font-semibold hover:bg-gray-700 transition-all shadow-subtle hover:shadow-medium hover:scale-105"> <i class="fas fa-minus-circle mr-2 text-white"></i> <span class="text-white" data-en="View Less" data-id="Lihat Lebih Sedikit">View Less</span> </button>
+    </div>
+   </div>
+  </section>
+  <div class="section-divider"></div><!-- Experience Section -->
+  <section id="experience" class="py-20 bg-gray-50">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 fade-in">
+     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-en="Learning Journey" data-id="Perjalanan Belajar">Learning Journey</h2>
+     <div class="w-20 h-1 bg-blue-600 mx-auto rounded mb-3"></div>
+     <p class="text-base text-gray-600" data-en="Project-based learning experiences and practical applications" data-id="Pengalaman belajar berbasis proyek dan aplikasi praktis">Project-based learning experiences and practical applications</p>
+    </div>
+    <div class="max-w-4xl mx-auto">
+     <div id="experienceContainer" class="timeline"><!-- Experience items will be loaded here -->
+     </div>
+     <div id="experienceViewMore" class="text-center mt-10 hidden"><button onclick="toggleExperienceView()" class="px-8 py-3.5 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-subtle hover:shadow-medium hover:scale-105"> <i class="fas fa-plus-circle mr-2 text-white"></i> <span class="text-white" data-en="View More Experience" data-id="Lihat Lebih Banyak Pengalaman">View More Experience</span> </button>
+     </div>
+     <div id="experienceViewLess" class="text-center mt-10 hidden"><button onclick="toggleExperienceView()" class="px-8 py-3.5 bg-gray-600 text-white rounded-xl font-semibold hover:bg-gray-700 transition-all shadow-subtle hover:shadow-medium hover:scale-105"> <i class="fas fa-minus-circle mr-2 text-white"></i> <span class="text-white" data-en="View Less" data-id="Lihat Lebih Sedikit">View Less</span> </button>
+     </div>
+    </div>
+   </div>
+  </section>
+  <div class="section-divider"></div><!-- Certificates Section -->
+  <section id="certificates" class="py-20 bg-white">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 fade-in">
+     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-en="Certificates &amp; Achievements" data-id="Sertifikat &amp; Pencapaian">Certificates &amp; Achievements</h2>
+     <div class="w-20 h-1 bg-blue-600 mx-auto rounded"></div>
+    </div>
+    <div id="certificatesContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"><!-- Certificates will be loaded here -->
+    </div>
+    <div id="certificatesViewMore" class="text-center mt-10 hidden"><button onclick="toggleCertificatesView()" class="px-8 py-3.5 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-subtle hover:shadow-medium hover:scale-105"> <i class="fas fa-plus-circle mr-2 text-white"></i> <span class="text-white" data-en="View More Certificates" data-id="Lihat Lebih Banyak Sertifikat">View More Certificates</span> </button>
+    </div>
+    <div id="certificatesViewLess" class="text-center mt-10 hidden"><button onclick="toggleCertificatesView()" class="px-8 py-3.5 bg-gray-600 text-white rounded-xl font-semibold hover:bg-gray-700 transition-all shadow-subtle hover:shadow-medium hover:scale-105"> <i class="fas fa-minus-circle mr-2 text-white"></i> <span class="text-white" data-en="View Less" data-id="Lihat Lebih Sedikit">View Less</span> </button>
+    </div>
+   </div>
+  </section>
+  <div class="section-divider"></div><!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-50">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 fade-in">
+     <h2 id="contactTitle" class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-en="Let's Connect" data-id="Mari Terhubung">Let's Connect</h2>
+     <div class="w-20 h-1 bg-blue-600 mx-auto rounded mb-3"></div>
+     <p id="contactSubtitle" class="text-base text-gray-600 max-w-2xl mx-auto" data-en="I'm actively seeking data analyst internship opportunities. Let's discuss how I can contribute to your team!" data-id="Saya aktif mencari peluang magang data analyst. Mari diskusikan bagaimana saya dapat berkontribusi untuk tim Anda!">I'm actively seeking data analyst internship opportunities. Let's discuss how I can contribute to your team!</p>
+    </div>
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8"><!-- Contact Form -->
+     <div class="bg-white rounded-2xl p-8 shadow-subtle border border-gray-100 fade-in-delay-1">
+      <h3 class="text-2xl font-bold text-gray-900 mb-6" data-en="Send a Message" data-id="Kirim Pesan">Send a Message</h3>
+      <form id="contactForm" class="space-y-5">
+       <div><label for="name" class="block text-sm font-semibold text-gray-700 mb-2" data-en="Your Name" data-id="Nama Anda">Your Name</label> <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" placeholder="John Doe">
+       </div>
+       <div><label for="email" class="block text-sm font-semibold text-gray-700 mb-2" data-en="Email Address" data-id="Alamat Email">Email Address</label> <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" placeholder="john@company.com">
+       </div>
+       <div><label for="subject" class="block text-sm font-semibold text-gray-700 mb-2" data-en="Subject" data-id="Subjek">Subject</label> <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" placeholder="Internship Opportunity">
+       </div>
+       <div><label for="message" class="block text-sm font-semibold text-gray-700 mb-2" data-en="Message" data-id="Pesan">Message</label> <textarea id="message" name="message" required rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none" placeholder="Tell me about the opportunity..."></textarea>
+       </div><button type="submit" class="w-full btn-primary px-6 py-3.5 rounded-xl font-semibold shadow-subtle"> <i class="fas fa-paper-plane mr-2 text-white"></i> <span class="text-white" data-en="Send Message" data-id="Kirim Pesan">Send Message</span> </button>
+      </form>
+     </div><!-- Contact Info -->
+     <div class="space-y-5 fade-in-delay-2">
+      <div class="bg-white rounded-2xl p-6 shadow-subtle border border-gray-100 hover:shadow-medium transition-all">
+       <div class="flex items-start gap-4">
+        <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-subtle"><i class="fas fa-envelope text-xl text-white"></i>
+        </div>
+        <div>
+         <h4 class="font-bold text-gray-900 mb-1.5 text-base" data-en="Email" data-id="Email">Email</h4><a href="mailto:muhammadsyahrulfirdaus22@gmail.com" class="text-gray-600 hover:text-blue-600 transition-all text-sm break-all"> muhammadsyahrulfirdaus22@gmail.com </a>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-subtle border border-gray-100 hover:shadow-medium transition-all">
+       <div class="flex items-start gap-4">
+        <div class="w-12 h-12 bg-blue-700 rounded-xl flex items-center justify-center flex-shrink-0 shadow-subtle"><i class="fab fa-linkedin text-xl text-white"></i>
+        </div>
+        <div>
+         <h4 class="font-bold text-gray-900 mb-1.5 text-base" data-en="LinkedIn" data-id="LinkedIn">LinkedIn</h4><a href="https://www.linkedin.com/in/sahrul-firdaus/" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition-all text-sm"> linkedin.com/in/sahrul-firdaus </a>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-subtle border border-gray-100 hover:shadow-medium transition-all">
+       <div class="flex items-start gap-4">
+        <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center flex-shrink-0 shadow-subtle"><i class="fab fa-github text-xl text-white"></i>
+        </div>
+        <div>
+         <h4 class="font-bold text-gray-900 mb-1.5 text-base" data-en="GitHub" data-id="GitHub">GitHub</h4><a href="https://github.com/SahrulFirdaus779" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition-all text-sm"> github.com/SahrulFirdaus779 </a>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-subtle border border-gray-100 hover:shadow-medium transition-all">
+       <div class="flex items-start gap-4">
+        <div class="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-subtle"><i class="fab fa-whatsapp text-xl text-white"></i>
+        </div>
+        <div>
+         <h4 class="font-bold text-gray-900 mb-1.5 text-base" data-en="WhatsApp" data-id="WhatsApp">WhatsApp</h4><a href="https://wa.me/62089527509633" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-green-600 transition-all text-sm"> +62 895-2750-9633 </a>
+        </div>
+       </div>
+      </div><a href="https://drive.google.com/uc?export=download&amp;id=12a7dJC-4Mof9ct6-Ksv_lLyOi9qXa03e" target="_blank" rel="noopener noreferrer" class="block bg-blue-600 text-white rounded-2xl p-6 shadow-subtle text-center hover:shadow-medium hover:bg-blue-700 transition-all"> <i class="fas fa-download text-2xl mb-2"></i>
+       <div class="text-lg font-bold" data-en="Download My CV" data-id="Unduh CV Saya">
+        Download My CV
+       </div>
+       <div class="text-sm opacity-90" data-en="Get my full resume in PDF" data-id="Dapatkan resume lengkap dalam PDF">
+        Get my full resume in PDF
+       </div></a>
+     </div>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+     <h3 class="text-3xl font-bold mb-2">Sahrul Firdaus</h3>
+     <p class="text-gray-400 mb-6 text-base" data-en="Think, Learn, Do It" data-id="Think, Learn, Do It">Think, Learn, Do It</p>
+     <div class="flex justify-center gap-4 mb-8"><a href="https://github.com/SahrulFirdaus779" target="_blank" rel="noopener noreferrer" class="w-11 h-11 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-all hover:scale-105"> <i class="fab fa-github text-lg"></i> </a> <a href="https://www.linkedin.com/in/sahrul-firdaus/" target="_blank" rel="noopener noreferrer" class="w-11 h-11 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all hover:scale-105"> <i class="fab fa-linkedin text-lg"></i> </a> <a href="mailto:muhammadsyahrulfirdaus22@gmail.com" class="w-11 h-11 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all hover:scale-105"> <i class="fas fa-envelope text-lg"></i> </a> <a href="https://wa.me/62089527509633" target="_blank" rel="noopener noreferrer" class="w-11 h-11 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition-all hover:scale-105"> <i class="fab fa-whatsapp text-lg"></i> </a>
+     </div>
+     <p class="text-gray-500 text-sm" data-en="© 2024 Sahrul Firdaus. Available for internship opportunities." data-id="© 2024 Sahrul Firdaus. Tersedia untuk peluang magang.">© 2024 Sahrul Firdaus. Available for internship opportunities.</p>
+    </div>
+   </div>
+  </footer><!-- Project Modal -->
+  <div id="projectModal" class="modal">
+   <div class="modal-content">
+    <div id="modalContent"></div>
+   </div>
+  </div><!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+  <script>
+    // Configuration
+    const defaultConfig = {
+      hero_name: "Sahrul Firdaus",
+      hero_tagline: "Think, Learn, Do It",
+      hero_role: "Aspiring Data Analyst",
+      hero_value_statement: "Turning raw data into meaningful decisions through analysis, visualization, and storytelling.",
+      about_title: "About Me",
+      contact_title: "Let's Connect",
+      contact_subtitle: "I'm actively seeking data analyst internship opportunities. Let's discuss how I can contribute to your team!",
+      background_color: "#FFFFFF",
+      surface_color: "#F9FAFB",
+      text_color: "#111827",
+      primary_color: "#2563EB",
+      secondary_color: "#1E40AF",
+      font_family: "Poppins",
+      font_size: 16
+    };
+
+    // Data
+    const projectsData = [
+      {
+        id: 1,
+        title: "Superstore Dashboard Analytics",
+        titleId: "Analitik Dashboard Superstore",
+        description: "Comprehensive sales and profit performance analysis using interactive dashboard",
+        descriptionId: "Analisis kinerja penjualan dan profit komprehensif menggunakan dashboard interaktif",
+        category: "Business Intelligence",
+        tools: ["Python", "Pandas", "Plotly", "Streamlit"],
+        insights: [
+          "High discount rates correlate with significant profit drops",
+          "West region generated highest revenue across all segments",
+          "Home Office segment showing consistent growth trend"
+        ],
+        insightsId: [
+          "Tingkat diskon tinggi berkorelasi dengan penurunan profit signifikan",
+          "Region West menghasilkan revenue tertinggi di semua segmen",
+          "Segmen Home Office menunjukkan tren pertumbuhan konsisten"
+        ],
+        images: ["assets/img/superstore1.png", "assets/img/superstore2.png", "assets/img/superstore3.png"],
+        links: {
+          github: "https://github.com/SahrulFirdaus779",
+          dashboard: "https://syafii-dashboard.streamlit.app/",
+          presentation: "https://drive.google.com/file/d/13BvcxHwXSQ9EM4RWn_hJM2fQiFjLt3Vo/view",
+          demo: "https://drive.google.com/file/d/1kbDq3__WLbsrEYf_q2dqkQJLLN6wURXc/view"
+        }
+      },
+      {
+        id: 2,
+        title: "Marriage is Scary - Social Phenomenon Analysis",
+        titleId: "Marriage is Scary - Analisis Fenomena Sosial",
+        description: "Statistical analysis comparing social perception vs actual marriage data in Indonesia (BPS 2018-2024)",
+        descriptionId: "Analisis statistik membandingkan persepsi sosial vs data pernikahan aktual di Indonesia (BPS 2018-2024)",
+        category: "Social Analytics",
+        tools: ["Python", "Pandas", "Seaborn", "Plotly", "Streamlit"],
+        insights: [
+          "Marriage rates declined significantly during pandemic period",
+          "Post-pandemic divorce rates showed upward trend",
+          "Financial issues identified as dominant cause of divorce"
+        ],
+        insightsId: [
+          "Tingkat pernikahan menurun signifikan selama periode pandemi",
+          "Tingkat perceraian pasca-pandemi menunjukkan tren naik",
+          "Masalah finansial teridentifikasi sebagai penyebab dominan perceraian"
+        ],
+        images: ["assets/img/Marriage1.png","assets/img/Marriage2.png", "assets/img/Marriage3.png"],
+        links: {
+          github: "https://github.com/SahrulFirdaus779",
+          dashboard: "https://kelompokpemula.streamlit.app/",
+          article: "https://medium.com/@abiyyu03/ketika-menikah-karena-cinta-doang-gak-cukup-968cea73dd18"
+        }
+      },
+      {
+        id: 3,
+        title: "BNPB Disaster Data Analysis & 2025 Forecasting",
+        titleId: "Analisis Data Bencana BNPB & Forecasting 2025",
+        description: "Time series analysis of disaster patterns and predictive modeling for 2025 using Prophet",
+        descriptionId: "Analisis time series pola bencana dan pemodelan prediktif untuk 2025 menggunakan Prophet",
+        category: "Predictive Analytics",
+        tools: ["Python", "Prophet", "Pandas", "Matplotlib"],
+        insights: [
+          "Hydrometeorological disasters dominate disaster frequency",
+          "Seasonal peaks identified in January-February period",
+          "2025 forecast predicts increasing disaster frequency trend"
+        ],
+        insightsId: [
+          "Bencana hidrometeorologi mendominasi frekuensi bencana",
+          "Puncak musiman teridentifikasi pada periode Januari-Februari",
+          "Forecast 2025 memprediksi tren peningkatan frekuensi bencana"
+        ],
+        images: ["assets/img/peramalan1.png","assets/img/peramalan2.png","assets/img/peramalan3.png"],
+        links: {
+          github: "https://github.com/SahrulFirdaus779",
+          presentation: "#presentation-ppt"
+        }
+      }
+    ];
+
+    const experienceData = [
+      {
+        title: "Advanced Data Analysis Project",
+        titleId: "Proyek Analisis Data Lanjutan",
+        period: "2024",
+        items: [
+          "Built 3 comprehensive data analysis projects with real-world datasets",
+          "Implemented time series forecasting using Prophet algorithm",
+          "Created interactive dashboards with Streamlit for data visualization"
+        ],
+        itemsId: [
+          "Membangun 3 proyek analisis data komprehensif dengan dataset dunia nyata",
+          "Mengimplementasikan forecasting time series menggunakan algoritma Prophet",
+          "Membuat dashboard interaktif dengan Streamlit untuk visualisasi data"
+        ]
+      },
+      {
+        title: "Machine Learning Fundamentals",
+        titleId: "Fundamental Machine Learning",
+        period: "2023-2024",
+        items: [
+          "Mastered supervised and unsupervised learning algorithms",
+          "Applied regression, classification, and clustering techniques",
+          "Developed predictive models with 85%+ accuracy rates"
+        ],
+        itemsId: [
+          "Menguasai algoritma supervised dan unsupervised learning",
+          "Menerapkan teknik regresi, klasifikasi, dan clustering",
+          "Mengembangkan model prediktif dengan akurasi 85%+"
+        ]
+      },
+      {
+        title: "Data Visualization Mastery",
+        titleId: "Penguasaan Visualisasi Data",
+        period: "2023",
+        items: [
+          "Created compelling data stories using Matplotlib, Seaborn, and Plotly",
+          "Designed dashboards following best practices in data visualization",
+          "Transformed complex data into actionable insights for stakeholders"
+        ],
+        itemsId: [
+          "Membuat cerita data yang menarik menggunakan Matplotlib, Seaborn, dan Plotly",
+          "Mendesain dashboard mengikuti best practices dalam visualisasi data",
+          "Mengubah data kompleks menjadi insight yang actionable untuk stakeholder"
+        ]
+      }
+    ];
+
+    const certificatesData = [
+    {
+        title: "Belajar Machine Learning untuk Pemula",
+        titleId: "Sertifikat Belajar Machine Learning untuk Pemula",
+        organization: "Dicoding Indonesia",
+        year: "2025",
+        link: "https://www.dicoding.com/certificates/KEXL2E20WZG2"
+    },
+    {
+        title: "Memulai Pemrograman dengan Python",
+        titleId: "Sertifikat Memulai Pemrograman dengan Python",
+        organization: "Dicoding Indonesia",
+        year: "2025",
+        link: "https://dicoding.com/certificates/10P8204KVPQK"
+    },
+    {
+        title: "Belajar Dasar SQL",
+        titleId: "Sertifikat Belajar Dasar SQL",
+        organization: "Dicoding Indonesia",
+        year: "2024",
+        link: "https://dicoding.com/certificates/NVP750424XR0"
+    },
+    {
+        title: "Belajar Dasar Data Science",
+        titleId: "Sertifikat Belajar Dasar Data Science",
+        organization: "Dicoding Indonesia",
+        year: "2024",
+        link: "https://dicoding.com/certificates/JMZVE94RNPN9"
+    },
+    
+    {
+        title: "Belajar Dasar Visualisasi Data",
+        titleId: "Sertifikat Belajar Dasar Visualisasi Data",
+        organization: "Dicoding Indonesia",
+        year: "2025",
+        link: "https://dicoding.com/certificates/6RPNRQD98X2M"
+    },
+    {
+        title: "Belajar Penggunaan Generative AI",
+        titleId: "Sertifikat Belajar Penggunaan Generative AI",
+        organization: "Dicoding Indonesia",
+        year: "2025",
+        link: "https://dicoding.com/certificates/L4PQENYOOPO1"
+    },
+    {
+        title: "AI Praktis untuk Produktivitas",
+        titleId: "Sertifikat AI Praktis untuk Produktivitas",
+        organization: "Dicoding Indonesia",
+        year: "2025",
+        link: "https://dicoding.com/certificates/81P2LE57Y"
+    },
+    {
+        title: "Financial Literacy 101",
+        titleId: "Sertifikat Financial Literacy 101",
+        organization: "Dicoding Indonesia",
+        year: "2025",
+        link: "https://dicoding.com/certificates/MEPJQDO7WX3V"
+    },
+    {
+        title: "Belajar Dasar AI",
+        titleId: "Sertifikat Belajar Dasar AI",
+        organization: "Dicoding Indonesia",
+        year: "2024",
+        link: "https://dicoding.com/certificates/53XEDNQRVPRN"
+    },
+    {
+        title: "Belajar Dasar Manajemen Proyek",
+        titleId: "Sertifikat Belajar Dasar Manajemen Proyek",
+        organization: "Dicoding Indonesia",
+        year: "2024",
+        link: "https://dicoding.com/certificates/GRX53D48RZOM"
+    },
+    {
+        title: "Belajar Dasar Pemrograman Web",
+        titleId: "Sertifikat Belajar Dasar Pemrograman Web",
+        organization: "Dicoding Indonesia",
+        year: "2024",
+        link: "https://dicoding.com/certificates/L4PQ18D4QX01"
+    },
+      {
+        title: "Data Science Professional Certificate",
+        titleId: "Sertifikat Profesional Data Science",
+        organization: "IBM - Coursera",
+        year: "2024",
+        link: "#certificate-verify"
+      },
+      {
+        title: "Machine Learning Specialization",
+        titleId: "Spesialisasi Machine Learning",
+        organization: "Stanford University - Coursera",
+        year: "2024",
+        link: "#certificate-verify"
+      },
+      {
+        title: "Python for Data Science",
+        titleId: "Python untuk Data Science",
+        organization: "DataCamp",
+        year: "2023",
+        link: "#certificate-verify"
+      },
+      {
+        title: "Data Analysis with Python",
+        titleId: "Analisis Data dengan Python",
+        organization: "FreeCodeCamp",
+        year: "2023",
+        link: "#certificate-verify"
+      },
+      {
+        title: "Data Visualization Certification",
+        titleId: "Sertifikasi Visualisasi Data",
+        organization: "Tableau",
+        year: "2023",
+        link: "#certificate-verify"
+      },
+      {
+        title: "SQL for Data Analysis",
+        titleId: "SQL untuk Analisis Data",
+        organization: "Udacity",
+        year: "2023",
+        link: "#certificate-verify"
+      }
+    ];
+
+    let currentLang = 'en';
+    let currentCarouselIndex = 0;
+    let isLanguageTransitioning = false;
+    let showAllProjects = false;
+    let showAllExperience = false;
+    let showAllCertificates = false;
+    const INITIAL_ITEMS_COUNT = 3;
+
+    // Skeleton Loader Function
+    function createProjectSkeleton() {
+      return `
+        <div class="skeleton-card fade-in">
+          <div class="skeleton-header"></div>
+          <div class="p-6">
+            <div class="skeleton skeleton-badge mb-3"></div>
+            <div class="skeleton skeleton-title"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text" style="width: 85%;"></div>
+            <div class="flex flex-wrap gap-2 mb-4 mt-4">
+              <div class="skeleton skeleton-badge"></div>
+              <div class="skeleton skeleton-badge"></div>
+              <div class="skeleton skeleton-badge"></div>
+            </div>
+            <div class="skeleton skeleton-button"></div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Language Toggle with Smooth Transition
+    function updateLanguage() {
+      if (isLanguageTransitioning) return;
+      
+      isLanguageTransitioning = true;
+      const elements = document.querySelectorAll('[data-en][data-id]');
+      
+      elements.forEach(el => {
+        el.classList.add('lang-transitioning');
+      });
+      
+      setTimeout(() => {
+        elements.forEach(el => {
+          const text = currentLang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-id');
+          if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+            el.placeholder = text;
+          } else {
+            el.textContent = text;
+          }
+          el.classList.remove('lang-transitioning');
+          el.style.animation = 'fadeInText 0.4s ease-in-out';
+        });
+        
+        setTimeout(() => {
+          elements.forEach(el => {
+            el.style.animation = '';
+          });
+          isLanguageTransitioning = false;
+        }, 400);
+        
+        loadProjects();
+        loadExperience();
+        loadCertificates();
+      }, 250);
+    }
+
+    document.getElementById('langToggle').addEventListener('click', () => {
+      currentLang = currentLang === 'en' ? 'id' : 'en';
+      document.getElementById('langToggle').textContent = currentLang.toUpperCase();
+      updateLanguage();
+    });
+
+    // Dark Mode Toggle
+    document.getElementById('darkModeToggle').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const icon = document.querySelector('#darkModeToggle i');
+      icon.classList.toggle('fa-moon');
+      icon.classList.toggle('fa-sun');
+    });
+
+    // Mobile Menu
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', (e) => {
+        const href = anchor.getAttribute('href');
+        if (href === '#' || href === '#certificate-verify' || href === '#report-pdf' || href === '#presentation-ppt' || href === '#dashboard-demo' || href === '#medium-article') {
+          return;
+        }
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          document.getElementById('mobileMenu').classList.add('hidden');
+        }
+      });
+    });
+
+    // Parallax Effect
+    function initParallax() {
+      const parallaxSection = document.querySelector('.parallax-container');
+      const parallaxLayers = document.querySelectorAll('.parallax-layer');
+      
+      if (window.innerWidth <= 768) return;
+      
+      parallaxSection.addEventListener('mousemove', (e) => {
+        const rect = parallaxSection.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const moveX = (x - centerX) / centerX;
+        const moveY = (y - centerY) / centerY;
+        
+        parallaxLayers.forEach((layer, index) => {
+          const depth = (index + 1) * 8;
+          const translateX = moveX * depth;
+          const translateY = moveY * depth;
+          layer.style.transform = `translate(${translateX}px, ${translateY}px)`;
+        });
+      });
+      
+      parallaxSection.addEventListener('mouseleave', () => {
+        parallaxLayers.forEach(layer => {
+          layer.style.transform = 'translate(0, 0)';
+        });
+      });
+    }
+
+    // Toggle Projects View
+    function toggleProjectsView() {
+      showAllProjects = !showAllProjects;
+      loadProjects();
+      
+      if (!showAllProjects) {
+        document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    // Load Projects with Skeleton
+      function loadProjects() {
+      const container = document.getElementById('projectsContainer');
+      const viewMoreBtn = document.getElementById('projectsViewMore');
+      const viewLessBtn = document.getElementById('projectsViewLess');
+
+      // Menyortir proyek berdasarkan ID terbesar
+      const sortedProjects = [...projectsData].sort((a, b) => b.id - a.id); // Mengurutkan secara menurun berdasarkan ID
+
+      container.innerHTML = Array(3).fill(createProjectSkeleton()).join('');
+
+      setTimeout(() => {
+          const displayData = showAllProjects ? sortedProjects : sortedProjects.slice(0, INITIAL_ITEMS_COUNT);
+          
+          container.innerHTML = displayData.map(project => `
+            <div class="bg-white rounded-2xl overflow-hidden shadow-subtle border border-gray-100 card-hover fade-in">
+                <div class="h-48 rounded-t-2xl overflow-hidden">
+                    <img src="${project.images[0]}" alt="Screenshot 1" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-6">
+                    <div class="inline-block px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-semibold mb-3 border border-blue-100">
+                        ${project.category}
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2 leading-snug">
+                        ${currentLang === 'en' ? project.title : project.titleId}
+                    </h3>
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                        ${currentLang === 'en' ? project.description : project.descriptionId}
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      ${project.tools.map(tool => `
+                        <span class="px-2.5 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium border border-blue-100">${tool}</span>
+                      `).join('')}
+                    </div>
+                    <button onclick="openProjectModal(${project.id})" class="w-full btn-primary px-4 py-2.5 text-white rounded-xl font-semibold text-sm shadow-subtle">
+                        <i class="fas fa-expand-alt mr-2"></i>
+                        ${currentLang === 'en' ? 'View Details' : 'Lihat Detail'}
+                    </button>
+                </div>
+            </div>
+          `).join('');
+
+          const fadeElements = container.querySelectorAll('.fade-in');
+          fadeElements.forEach(el => {
+            el.style.animationPlayState = 'running';
+          });
+
+          // Show/hide view more button
+          if (sortedProjects.length > INITIAL_ITEMS_COUNT) {
+            if (showAllProjects) {
+              viewMoreBtn.classList.add('hidden');
+              viewLessBtn.classList.remove('hidden');
+            } else {
+              viewMoreBtn.classList.remove('hidden');
+              viewLessBtn.classList.add('hidden');
+            }
+          } else {
+            viewMoreBtn.classList.add('hidden');
+            viewLessBtn.classList.add('hidden');
+          }
+      }, 600);
+  }
+
+    // Open Project Modal
+    function openProjectModal(projectId) {
+      const project = projectsData.find(p => p.id === projectId);
+      if (!project) return;
+
+      const modal = document.getElementById('projectModal');
+      const modalContent = document.getElementById('modalContent');
+      
+      currentCarouselIndex = 0;
+      
+      modalContent.innerHTML = `
+        <div class="p-8">
+          <div class="flex justify-between items-start mb-6">
+            <div>
+              <div class="inline-block px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-semibold mb-3 border border-blue-100">
+                ${project.category}
+              </div>
+              <h2 class="text-2xl font-bold text-gray-900">
+                ${currentLang === 'en' ? project.title : project.titleId}
+              </h2>
+            </div>
+            <button onclick="closeProjectModal()" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-300 transition-all">
+              <i class="fas fa-times text-gray-700"></i>
+            </button>
+          </div>
+          
+          <div class="carousel mb-6">
+            ${project.images.map((img, index) => `
+                <div class="carousel-item ${index === 0 ? 'active' : ''}">
+                <img src="${img}" alt="Project screenshot ${index + 1}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover">
+                <div style="display:none;" class="w-full h-full flex items-center justify-center text-white text-center bg-gray-800">
+                    <div>
+                    <i class="fas fa-image text-7xl mb-4 opacity-40"></i>
+                    <p class="text-lg font-semibold">${currentLang === 'en' ? 'Project Screenshot' : 'Screenshot Proyek'} ${index + 1}</p>
+                    </div>
+                </div>
+                </div>
+            `).join('')}
+            <button onclick="changeCarousel(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white bg-opacity-90 rounded-full flex items-center justify-center hover:bg-opacity-100 transition-all shadow-md">
+                <i class="fas fa-chevron-left text-gray-800"></i>
+            </button>
+            <button onclick="changeCarousel(1)" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white bg-opacity-90 rounded-full flex items-center justify-center hover:bg-opacity-100 transition-all shadow-md">
+                <i class="fas fa-chevron-right text-gray-800"></i>
+            </button>
+            </div>
+          
+          <div class="mb-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-3">
+              ${currentLang === 'en' ? 'Description' : 'Deskripsi'}
+            </h3>
+            <p class="text-gray-700 leading-relaxed text-sm">
+              ${currentLang === 'en' ? project.description : project.descriptionId}
+            </p>
+          </div>
+          
+          <div class="mb-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-3">
+              ${currentLang === 'en' ? 'Key Insights' : 'Insight Utama'}
+            </h3>
+            <ul class="space-y-2">
+              ${(currentLang === 'en' ? project.insights : project.insightsId).map(insight => `
+                <li class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-green-500 mt-0.5 text-sm"></i>
+                  <span class="text-gray-700 text-sm">${insight}</span>
+                </li>
+              `).join('')}
+            </ul>
+          </div>
+          
+          <div class="mb-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-3">
+              ${currentLang === 'en' ? 'Tools & Technologies' : 'Tools & Teknologi'}
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              ${project.tools.map(tool => `
+                <span class="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full font-medium text-sm border border-blue-100">${tool}</span>
+              `).join('')}
+            </div>
+          </div>
+          
+          <div class="flex flex-wrap gap-3">
+            ${project.links.github ? `
+              <a href="${project.links.github}" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-all text-sm shadow-subtle">
+                <i class="fab fa-github mr-2"></i>GitHub
+              </a>
+            ` : ''}
+            ${project.links.dashboard ? `
+              <a href="${project.links.dashboard}" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all text-sm shadow-subtle">
+                <i class="fas fa-external-link-alt mr-2"></i>Dashboard
+              </a>
+            ` : ''}
+            ${project.links.presentation ? `
+              <a href="${project.links.presentation}" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-red-600 text-white rounded-xl font-semibold hover:bg-red-700 transition-all text-sm shadow-subtle">
+                <i class="fas fa-presentation mr-2"></i>PPT
+              </a>
+            ` : ''}
+            ${project.links.demo ? `
+              <a href="${project.links.demo}" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition-all text-sm shadow-subtle">
+                <i class="fas fa-play-circle mr-2"></i>Demo
+              </a>
+            ` : ''}
+            ${project.links.article ? `
+              <a href="${project.links.article}" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition-all text-sm shadow-subtle">
+                <i class="fab fa-medium mr-2"></i>Article
+              </a>
+            ` : ''}
+          </div>
+        </div>
+      `;
+      
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProjectModal() {
+      const modal = document.getElementById('projectModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    function changeCarousel(direction) {
+      const items = document.querySelectorAll('.carousel-item');
+      items[currentCarouselIndex].classList.remove('active');
+      
+      currentCarouselIndex = (currentCarouselIndex + direction + items.length) % items.length;
+      items[currentCarouselIndex].classList.add('active');
+    }
+
+    document.getElementById('projectModal').addEventListener('click', (e) => {
+      if (e.target.id === 'projectModal') {
+        closeProjectModal();
+      }
+    });
+
+    // Toggle Experience View
+    function toggleExperienceView() {
+      showAllExperience = !showAllExperience;
+      loadExperience();
+      
+      if (!showAllExperience) {
+        document.getElementById('experience').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    // Load Experience
+    function loadExperience() {
+      const container = document.getElementById('experienceContainer');
+      const viewMoreBtn = document.getElementById('experienceViewMore');
+      const viewLessBtn = document.getElementById('experienceViewLess');
+      
+      const displayData = showAllExperience ? experienceData : experienceData.slice(0, INITIAL_ITEMS_COUNT);
+      
+      container.innerHTML = displayData.map(exp => `
+        <div class="timeline-item fade-in">
+          <div class="bg-white rounded-2xl p-6 shadow-subtle border border-gray-100 hover:shadow-medium transition-all">
+            <div class="flex justify-between items-start mb-3 flex-wrap gap-2">
+              <h3 class="text-lg font-bold text-gray-900">
+                ${currentLang === 'en' ? exp.title : exp.titleId}
+              </h3>
+              <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">
+                ${exp.period}
+              </span>
+            </div>
+            <ul class="space-y-2">
+              ${(currentLang === 'en' ? exp.items : exp.itemsId).map(item => `
+                <li class="flex items-start gap-3">
+                  <i class="fas fa-chevron-right text-blue-500 mt-1 text-xs"></i>
+                  <span class="text-gray-700 text-sm">${item}</span>
+                </li>
+              `).join('')}
+            </ul>
+          </div>
+        </div>
+      `).join('');
+      
+      // Show/hide view more button
+      if (experienceData.length > INITIAL_ITEMS_COUNT) {
+        if (showAllExperience) {
+          viewMoreBtn.classList.add('hidden');
+          viewLessBtn.classList.remove('hidden');
+        } else {
+          viewMoreBtn.classList.remove('hidden');
+          viewLessBtn.classList.add('hidden');
+        }
+      } else {
+        viewMoreBtn.classList.add('hidden');
+        viewLessBtn.classList.add('hidden');
+      }
+    }
+
+    // Toggle Certificates View
+    function toggleCertificatesView() {
+      showAllCertificates = !showAllCertificates;
+      loadCertificates();
+      
+      if (!showAllCertificates) {
+        document.getElementById('certificates').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    // Load Certificates
+    function loadCertificates() {
+      const container = document.getElementById('certificatesContainer');
+      const viewMoreBtn = document.getElementById('certificatesViewMore');
+      const viewLessBtn = document.getElementById('certificatesViewLess');
+      
+      const displayData = showAllCertificates ? certificatesData : certificatesData.slice(0, INITIAL_ITEMS_COUNT);
+      
+      container.innerHTML = displayData.map(cert => `
+        <div class="bg-white rounded-2xl p-6 shadow-subtle border border-gray-100 card-hover fade-in">
+          <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-4 shadow-subtle">
+            <i class="fas fa-certificate text-2xl text-white"></i>
+          </div>
+          <h3 class="text-base font-bold text-gray-900 mb-2 leading-snug">
+            ${currentLang === 'en' ? cert.title : cert.titleId}
+          </h3>
+          <p class="text-gray-600 mb-1 font-medium text-sm">${cert.organization}</p>
+          <p class="text-sm text-gray-500 mb-4">${cert.year}</p>
+          <a href="${cert.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold transition-all text-sm">
+            <i class="fas fa-external-link-alt text-xs"></i>
+            ${currentLang === 'en' ? 'Verify Certificate' : 'Verifikasi Sertifikat'}
+          </a>
+        </div>
+      `).join('');
+      
+      // Show/hide view more button
+      if (certificatesData.length > INITIAL_ITEMS_COUNT) {
+        if (showAllCertificates) {
+          viewMoreBtn.classList.add('hidden');
+          viewLessBtn.classList.remove('hidden');
+        } else {
+          viewMoreBtn.classList.remove('hidden');
+          viewLessBtn.classList.add('hidden');
+        }
+      } else {
+        viewMoreBtn.classList.add('hidden');
+        viewLessBtn.classList.add('hidden');
+      }
+    }
+
+    // Contact Form
+    document.getElementById('contactForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value
+      };
+      
+      showToast(currentLang === 'en' 
+        ? 'Thank you! Your message has been sent successfully. I\'ll get back to you soon!' 
+        : 'Terima kasih! Pesan Anda berhasil dikirim. Saya akan segera merespons!', 
+        'success'
+      );
+      
+      document.getElementById('contactForm').reset();
+    });
+
+    // Toast Notification
+    function showToast(message, type = 'success') {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.className = `toast ${type}`;
+      toast.style.display = 'block';
+      
+      setTimeout(() => {
+        toast.style.display = 'none';
+      }, 4000);
+    }
+
+    // Scroll Animation
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in, .fade-in-delay-1, .fade-in-delay-2, .fade-in-delay-3').forEach(el => {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+
+    // Element SDK Integration
+    async function onConfigChange(config) {
+      const customFont = config.font_family || defaultConfig.font_family;
+      const baseSize = config.font_size || defaultConfig.font_size;
+      const baseFontStack = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
+
+      document.body.style.backgroundColor = config.background_color || defaultConfig.background_color;
+      document.body.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      document.body.style.fontSize = `${baseSize}px`;
+
+      document.documentElement.style.setProperty('--cream-bg', config.background_color || defaultConfig.background_color);
+      document.documentElement.style.setProperty('--cream-light', config.surface_color || defaultConfig.surface_color);
+      document.documentElement.style.setProperty('--text-dark', config.text_color || defaultConfig.text_color);
+      document.documentElement.style.setProperty('--blue-primary', config.primary_color || defaultConfig.primary_color);
+      document.documentElement.style.setProperty('--blue-dark', config.secondary_color || defaultConfig.secondary_color);
+
+      document.getElementById('heroName').textContent = config.hero_name || defaultConfig.hero_name;
+      document.getElementById('heroTagline').textContent = config.hero_tagline || defaultConfig.hero_tagline;
+      
+      const heroRole = document.getElementById('heroRole');
+      heroRole.textContent = currentLang === 'en' ? (config.hero_role || defaultConfig.hero_role) : heroRole.getAttribute('data-id');
+      
+      const heroValueStatement = document.getElementById('heroValueStatement');
+      heroValueStatement.textContent = currentLang === 'en' ? (config.hero_value_statement || defaultConfig.hero_value_statement) : heroValueStatement.getAttribute('data-id');
+      
+      const aboutTitle = document.getElementById('aboutTitle');
+      aboutTitle.textContent = currentLang === 'en' ? (config.about_title || defaultConfig.about_title) : aboutTitle.getAttribute('data-id');
+      
+      const contactTitle = document.getElementById('contactTitle');
+      contactTitle.textContent = currentLang === 'en' ? (config.contact_title || defaultConfig.contact_title) : contactTitle.getAttribute('data-id');
+      
+      const contactSubtitle = document.getElementById('contactSubtitle');
+      contactSubtitle.textContent = currentLang === 'en' ? (config.contact_subtitle || defaultConfig.contact_subtitle) : contactSubtitle.getAttribute('data-id');
+
+      const headings = document.querySelectorAll('h1, h2, h3');
+      headings.forEach(heading => {
+        const tagLevel = parseInt(heading.tagName.substring(1));
+        heading.style.fontSize = `${baseSize * (3.5 - tagLevel * 0.5)}px`;
+        heading.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      });
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities: (config) => ({
+          recolorables: [
+            {
+              get: () => config.background_color || defaultConfig.background_color,
+              set: (value) => {
+                config.background_color = value;
+                window.elementSdk.setConfig({ background_color: value });
+              }
+            },
+            {
+              get: () => config.surface_color || defaultConfig.surface_color,
+              set: (value) => {
+                config.surface_color = value;
+                window.elementSdk.setConfig({ surface_color: value });
+              }
+            },
+            {
+              get: () => config.text_color || defaultConfig.text_color,
+              set: (value) => {
+                config.text_color = value;
+                window.elementSdk.setConfig({ text_color: value });
+              }
+            },
+            {
+              get: () => config.primary_color || defaultConfig.primary_color,
+              set: (value) => {
+                config.primary_color = value;
+                window.elementSdk.setConfig({ primary_color: value });
+              }
+            },
+            {
+              get: () => config.secondary_color || defaultConfig.secondary_color,
+              set: (value) => {
+                config.secondary_color = value;
+                window.elementSdk.setConfig({ secondary_color: value });
+              }
+            }
+          ],
+          borderables: [],
+          fontEditable: {
+            get: () => config.font_family || defaultConfig.font_family,
+            set: (value) => {
+              config.font_family = value;
+              window.elementSdk.setConfig({ font_family: value });
+            }
+          },
+          fontSizeable: {
+            get: () => config.font_size || defaultConfig.font_size,
+            set: (value) => {
+              config.font_size = value;
+              window.elementSdk.setConfig({ font_size: value });
+            }
+          }
+        }),
+        mapToEditPanelValues: (config) => new Map([
+          ["hero_name", config.hero_name || defaultConfig.hero_name],
+          ["hero_tagline", config.hero_tagline || defaultConfig.hero_tagline],
+          ["hero_role", config.hero_role || defaultConfig.hero_role],
+          ["hero_value_statement", config.hero_value_statement || defaultConfig.hero_value_statement],
+          ["about_title", config.about_title || defaultConfig.about_title],
+          ["contact_title", config.contact_title || defaultConfig.contact_title],
+          ["contact_subtitle", config.contact_subtitle || defaultConfig.contact_subtitle]
+        ])
+      });
+    }
+
+    // Initialize
+    loadProjects();
+    loadExperience();
+    loadCertificates();
+    initParallax();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a1f7f2b03dfb5db',t:'MTc2MzcyMDg2OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
