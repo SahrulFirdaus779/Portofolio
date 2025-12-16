@@ -12,7 +12,7 @@ function loadProjects() {
         <div class="project-card bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-subtle border border-gray-100 dark:border-gray-700 card-hover fade-in flex flex-col h-full group">
           <!-- Image Section -->
           <div class="aspect-[16/10] w-full overflow-hidden bg-gray-50 dark:bg-gray-800 relative border-b border-gray-100 dark:border-gray-700">
-            <img src="${project.images[0]}" alt="Project screenshot" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <img src="${project.images[0]}" alt="${project.title} Preview" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div style="display:none;" class="w-full h-full flex items-center justify-center text-gray-400 dark:text-gray-500 text-center bg-gray-100 dark:bg-gray-800 absolute top-0 left-0">
               <div>
                 <i class="fas fa-image text-3xl mb-2 opacity-40"></i>
@@ -62,6 +62,17 @@ function loadProjects() {
   } else {
     viewMoreBtn.classList.add('hidden');
     viewLessBtn.classList.add('hidden');
+  }
+
+  // Initialize Tilt Effect for new cards
+  if (typeof VanillaTilt !== 'undefined') {
+    VanillaTilt.init(document.querySelectorAll(".project-card"), {
+      max: 10,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.2,
+      scale: 1.02
+    });
   }
 }
 
@@ -383,9 +394,11 @@ function loadExperience() {
 
   const displayData = showAllExperience ? experienceData : experienceData.slice(0, INITIAL_ITEMS_COUNT);
 
-  container.innerHTML = displayData.map(exp => `
-        <div class="timeline-item fade-in">
-          <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-subtle border border-gray-100 dark:border-gray-700 hover:shadow-medium transition-all">
+  container.innerHTML = displayData.map((exp, index) => `
+        <div class="timeline-item fade-in relative pl-8 border-l-2 border-gray-200 dark:border-gray-700 pb-12 last:border-0 last:pb-0">
+          <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 ${index === 0 ? 'timeline-dot-pulse' : ''} ring-4 ring-white dark:ring-gray-900"></div>
+          
+          <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-subtle border border-gray-100 dark:border-gray-700 hover:shadow-medium transition-all group">
             <div class="flex justify-between items-start mb-3 flex-wrap gap-2">
               <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100">
                 ${currentLang === 'en' ? exp.title : exp.titleId}
@@ -517,9 +530,60 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
+document.querySelectorAll('.fade-in, .fade-in-delay-1, .fade-in-delay-2, .fade-in-delay-3, .section-divider-animated').forEach(el => {
+  if (el.classList.contains('section-divider-animated')) {
+    // Custom logic for divider if needed, or just let generic observer play animation
+    // Since CSS relies on .visible class for width, we might need a specific observer or reuse generic
+    // Actually, generic observer sets animationPlayState = running. 
+    // For width transition, we need a class addition.
+  }
+
+  // Let's create a specific observer for these to be safe
+});
+
+// Specific observer for Dividers and other triggers
+const triggerObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.section-divider-animated').forEach(el => {
+  triggerObserver.observe(el);
+});
+
+// Original Animation Observer
 document.querySelectorAll('.fade-in, .fade-in-delay-1, .fade-in-delay-2, .fade-in-delay-3').forEach(el => {
   el.style.animationPlayState = 'paused';
   observer.observe(el);
+});
+
+
+// --- PHASE 5 BONUS ---
+
+// Preloader Logic
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    preloader.style.opacity = '0';
+    setTimeout(() => {
+      preloader.style.display = 'none';
+    }, 500);
+  }
+});
+
+// Scroll Progress Bar
+const scrollProgress = document.getElementById('scrollProgress');
+window.addEventListener('scroll', () => {
+  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrollPercent = (scrollTop / scrollHeight) * 100;
+
+  if (scrollProgress) {
+    scrollProgress.style.width = `${scrollPercent}%`;
+  }
 });
 
 // Element SDK Integration
@@ -639,3 +703,23 @@ loadProjects();
 loadExperience();
 loadCertificates();
 initParallax();
+
+// Back to Top Button
+const backToTopBtn = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.classList.remove('translate-y-12', 'opacity-0');
+    backToTopBtn.classList.add('translate-y-0', 'opacity-100');
+  } else {
+    backToTopBtn.classList.add('translate-y-12', 'opacity-0');
+    backToTopBtn.classList.remove('translate-y-0', 'opacity-100');
+  }
+});
+
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});

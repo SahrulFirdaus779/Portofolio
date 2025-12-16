@@ -486,3 +486,91 @@
         font-size: 2rem !important;
       }
     }
+
+    /* --- PHASE 4 IMPROVEMENTS --- */
+
+    /* Skill Badge Hover Effect */
+    .skill-badge {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: default;
+      display: inline-block;
+    }
+
+    .skill-badge:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 4px 10px -1px rgba(59, 130, 246, 0.15);
+      z-index: 10;
+      position: relative;
+      border-color: #60A5FA;
+    }
+
+    html.dark .skill-badge:hover {
+      background-color: #1F2937;
+      border-color: #3B82F6;
+      box-shadow: 0 4px 10px -1px rgba(59, 130, 246, 0.25);
+    }
+
+    /* Floating Blob Animation for About Section */
+    @keyframes float-blob {
+      0% {
+        transform: translate(0px, 0px) scale(1);
+      }
+
+      33% {
+        transform: translate(10px, -15px) scale(1.1);
+      }
+
+      66% {
+        transform: translate(-5px, 10px) scale(0.9);
+      }
+
+      100% {
+        transform: translate(0px, 0px) scale(1);
+      }
+    }
+
+    .animate-blob {
+      animation: float-blob 8s infinite ease-in-out;
+    }
+
+    .animate-blob-delay {
+      animation: float-blob 10s infinite ease-in-out;
+      animation-delay: 2s;
+    }
+
+    /* Timeline Pulse Animation */
+    .timeline-dot-pulse {
+      position: relative;
+    }
+
+    .timeline-dot-pulse::after {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: -6px;
+      right: -6px;
+      bottom: -6px;
+      border-radius: 50%;
+      border: 2px solid #3B82F6;
+      opacity: 0;
+      animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    }
+
+    @keyframes pulse-ring {
+      0% {
+        transform: scale(0.5);
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: scale(2.5);
+        opacity: 0;
+      }
+    }
+
+    /* Form Focus Effects */
+    .form-input-focus-ring:focus-within {
+      box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+      border-color: #3B82F6;
+      transform: translateY(-1px);
+    }
