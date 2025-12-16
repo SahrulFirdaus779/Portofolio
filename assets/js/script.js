@@ -9,17 +9,17 @@ function loadProjects() {
   const displayData = showAllProjects ? sortedProjects : sortedProjects.slice(0, INITIAL_ITEMS_COUNT);
 
   container.innerHTML = displayData.map(project => `
-        <div class="project-card bg-white rounded-2xl overflow-hidden shadow-subtle border border-gray-100 card-hover fade-in flex flex-col h-full group">
+        <div class="project-card bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-subtle border border-gray-100 dark:border-gray-700 card-hover fade-in flex flex-col h-full group">
           <!-- Image Section -->
-          <div class="aspect-[16/10] w-full overflow-hidden bg-gray-50 relative border-b border-gray-100">
+          <div class="aspect-[16/10] w-full overflow-hidden bg-gray-50 dark:bg-gray-800 relative border-b border-gray-100 dark:border-gray-700">
             <img src="${project.images[0]}" alt="Project screenshot" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div style="display:none;" class="w-full h-full flex items-center justify-center text-gray-400 text-center bg-gray-100 absolute top-0 left-0">
+            <div style="display:none;" class="w-full h-full flex items-center justify-center text-gray-400 dark:text-gray-500 text-center bg-gray-100 dark:bg-gray-800 absolute top-0 left-0">
               <div>
                 <i class="fas fa-image text-3xl mb-2 opacity-40"></i>
               </div>
             </div>
             <div class="absolute bottom-3 left-3">
-               <span class="px-3 py-1 bg-white/90 backdrop-blur-sm text-blue-700 rounded-full text-xs font-semibold shadow-sm border border-white/50">
+               <span class="px-3 py-1 bg-white/90 dark:bg-gray-900/80 backdrop-blur-sm text-blue-700 dark:text-blue-300 rounded-full text-xs font-semibold shadow-sm border border-white/50 dark:border-gray-700/60">
                   ${project.category}
                </span>
             </div>
@@ -27,22 +27,22 @@ function loadProjects() {
           
           <!-- Content Section -->
           <div class="p-6 flex flex-col flex-1">
-            <h3 class="text-xl font-bold text-gray-900 mb-2 leading-tight group-hover:text-blue-600 transition-colors">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2 leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
               ${currentLang === 'en' ? project.title : project.titleId}
             </h3>
             
-            <p class="text-gray-600 mb-4 text-sm line-clamp-3 flex-1">
+            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm line-clamp-3 flex-1">
               ${currentLang === 'en' ? project.description : project.descriptionId}
             </p>
             
             <!-- Tools Tags -->
             <div class="flex flex-wrap gap-2 mb-6">
-               ${project.tools.slice(0, 3).map(tool => `<span class="px-2.5 py-1 bg-gray-100 text-gray-600 rounded-lg text-xs font-medium border border-gray-200">${tool}</span>`).join('')}
-               ${project.tools.length > 3 ? `<span class="px-2.5 py-1 bg-gray-100 text-gray-600 rounded-lg text-xs font-medium border border-gray-200">+${project.tools.length - 3}</span>` : ''}
+               ${project.tools.slice(0, 3).map(tool => `<span class="px-2.5 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-lg text-xs font-medium border border-gray-200 dark:border-gray-700">${tool}</span>`).join('')}
+               ${project.tools.length > 3 ? `<span class="px-2.5 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-lg text-xs font-medium border border-gray-200 dark:border-gray-700">+${project.tools.length - 3}</span>` : ''}
             </div>
 
             <!-- Action Button -->
-            <button onclick="openProjectModal(${project.id})" class="w-full py-3 bg-blue-600 hover:bg-blue-700 !text-white rounded-xl font-semibold transition-all shadow-subtle flex items-center justify-center gap-2 group-hover:shadow-elevated" style="color: #ffffff;">
+            <button onclick="openProjectModal(${project.id})" class="w-full py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800 !text-white rounded-xl font-semibold transition-all shadow-subtle flex items-center justify-center gap-2 group-hover:shadow-elevated" style="color: #ffffff;">
               <span class="text-white">${currentLang === 'en' ? 'View Details' : 'Lihat Detail'}</span>
               <i class="fas fa-expand-alt text-sm text-white"></i>
             </button>
@@ -79,7 +79,56 @@ const INITIAL_ITEMS_COUNT = 3;
 
 // Fetch all data JSON in parallel before rendering
 // Call load functions on page load (data already loaded from data.js)
+
+// Dark mode toggle logic
+function setDarkMode(isDark) {
+  const html = document.documentElement;
+  const icon = document.getElementById('darkModeIcon');
+  if (isDark) {
+    html.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+    if (icon) {
+      icon.classList.remove('fa-moon', 'text-gray-700');
+      icon.classList.add('fa-sun', 'text-yellow-400');
+      icon.title = 'Switch to light mode';
+    }
+  } else {
+    html.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+    if (icon) {
+      icon.classList.remove('fa-sun', 'text-yellow-400');
+      icon.classList.add('fa-moon', 'text-gray-700');
+      icon.title = 'Switch to dark mode';
+    }
+  }
+}
+
+function initDarkMode() {
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const savedTheme = localStorage.getItem('theme');
+  let isDark = false;
+  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    isDark = true;
+  }
+  setDarkMode(isDark);
+  // Update icon on load
+  const icon = document.getElementById('darkModeIcon');
+  if (icon) {
+    icon.classList.remove('fa-moon', 'fa-sun');
+    icon.classList.add(isDark ? 'fa-sun' : 'fa-moon');
+    icon.title = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+  }
+  const toggleBtn = document.getElementById('darkModeToggle');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function () {
+      const isDarkNow = !document.documentElement.classList.contains('dark');
+      setDarkMode(isDarkNow);
+    });
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
+  initDarkMode();
   loadProjects();
   loadExperience();
   loadCertificates();
@@ -123,13 +172,6 @@ function updateLanguage() {
   }, 200);
 }
 
-// Dark Mode Toggle
-document.getElementById('darkModeToggle').addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-  const icon = document.querySelector('#darkModeToggle i');
-  icon.classList.toggle('fa-moon');
-  icon.classList.toggle('fa-sun');
-});
 
 // Mobile Menu
 document.getElementById('mobileMenuBtn').addEventListener('click', () => {
@@ -157,7 +199,7 @@ function initParallax() {
   const parallaxSection = document.querySelector('.parallax-container');
   const parallaxLayers = document.querySelectorAll('.parallax-layer');
 
-  if (window.innerWidth <= 768) return;
+  if (!parallaxSection || window.innerWidth <= 768) return;
 
   parallaxSection.addEventListener('mousemove', (e) => {
     const rect = parallaxSection.getBoundingClientRect();
@@ -200,18 +242,18 @@ function openProjectModal(projectId) {
   currentCarouselIndex = 0;
 
   modalContent.innerHTML = `
-        <div class="p-8">
+        <div class="p-8 bg-white dark:bg-gray-900 rounded-2xl">
           <div class="flex justify-between items-start mb-6">
             <div>
-              <div class="inline-block px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-semibold mb-3 border border-blue-100">
+              <div class="inline-block px-3 py-1 bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-200 rounded-full text-sm font-semibold mb-3 border border-blue-100 dark:border-blue-900/60">
                 ${project.category}
               </div>
-              <h2 class="text-2xl font-bold text-gray-900">
+              <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">
                 ${currentLang === 'en' ? project.title : project.titleId}
               </h2>
             </div>
-            <button onclick="closeProjectModal()" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-300 transition-all">
-              <i class="fas fa-times text-gray-700"></i>
+            <button onclick="closeProjectModal()" class="w-10 h-10 bg-gray-200 dark:bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-300 dark:hover:bg-gray-700 transition-all">
+              <i class="fas fa-times text-gray-700 dark:text-gray-200"></i>
             </button>
           </div>
           
@@ -219,79 +261,79 @@ function openProjectModal(projectId) {
             ${project.images.map((img, index) => `
                 <div class="carousel-item ${index === 0 ? 'active' : ''}">
                 <img src="${img}" alt="Project screenshot ${index + 1}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover">
-                <div style="display:none;" class="w-full h-full flex items-center justify-center text-white text-center bg-gray-800">
-                    <div>
-                    <i class="fas fa-image text-7xl mb-4 opacity-40"></i>
-                    <p class="text-lg font-semibold">${currentLang === 'en' ? 'Project Screenshot' : 'Screenshot Proyek'} ${index + 1}</p>
-                    </div>
+                <div style="display:none;" class="w-full h-full flex items-center justify-center text-white dark:text-gray-200 text-center bg-gray-800 dark:bg-gray-900">
+                  <div>
+                  <i class="fas fa-image text-7xl mb-4 opacity-40"></i>
+                  <p class="text-lg font-semibold">${currentLang === 'en' ? 'Project Screenshot' : 'Screenshot Proyek'} ${index + 1}</p>
+                  </div>
                 </div>
                 </div>
             `).join('')}
-            <button onclick="changeCarousel(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white bg-opacity-90 rounded-full flex items-center justify-center hover:bg-opacity-100 transition-all shadow-md">
-                <i class="fas fa-chevron-left text-gray-800"></i>
+            <button onclick="changeCarousel(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white dark:bg-gray-800 bg-opacity-90 rounded-full flex items-center justify-center hover:bg-opacity-100 dark:hover:bg-opacity-100 transition-all shadow-md">
+              <i class="fas fa-chevron-left text-gray-800 dark:text-gray-200"></i>
             </button>
-            <button onclick="changeCarousel(1)" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white bg-opacity-90 rounded-full flex items-center justify-center hover:bg-opacity-100 transition-all shadow-md">
-                <i class="fas fa-chevron-right text-gray-800"></i>
+            <button onclick="changeCarousel(1)" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white dark:bg-gray-800 bg-opacity-90 rounded-full flex items-center justify-center hover:bg-opacity-100 dark:hover:bg-opacity-100 transition-all shadow-md">
+              <i class="fas fa-chevron-right text-gray-800 dark:text-gray-200"></i>
             </button>
             </div>
           
           <div class="mb-6">
-            <h3 class="text-lg font-bold text-gray-900 mb-3">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">
               ${currentLang === 'en' ? 'Description' : 'Deskripsi'}
             </h3>
-            <p class="text-gray-700 leading-relaxed text-sm">
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
               ${currentLang === 'en' ? project.description : project.descriptionId}
             </p>
           </div>
           
           <div class="mb-6">
-            <h3 class="text-lg font-bold text-gray-900 mb-3">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">
               ${currentLang === 'en' ? 'Key Insights' : 'Insight Utama'}
             </h3>
             <ul class="space-y-2">
               ${(currentLang === 'en' ? project.insights : project.insightsId).map(insight => `
                 <li class="flex items-start gap-3">
                   <i class="fas fa-check-circle text-green-500 mt-0.5 text-sm"></i>
-                  <span class="text-gray-700 text-sm">${insight}</span>
+                  <span class="text-gray-700 dark:text-gray-300 text-sm">${insight}</span>
                 </li>
               `).join('')}
             </ul>
           </div>
           
           <div class="mb-6">
-            <h3 class="text-lg font-bold text-gray-900 mb-3">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">
               ${currentLang === 'en' ? 'Tools & Technologies' : 'Tools & Teknologi'}
             </h3>
             <div class="flex flex-wrap gap-2">
               ${project.tools.map(tool => `
-                <span class="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full font-medium text-sm border border-blue-100">${tool}</span>
+                <span class="px-3 py-1.5 bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-200 rounded-full font-medium text-sm border border-blue-100 dark:border-blue-900/60">${tool}</span>
               `).join('')}
             </div>
           </div>
           
           <div class="flex flex-wrap gap-3">
             ${project.links.github ? `
-              <a href="${project.links.github}" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-all text-sm shadow-subtle">
+              <a href="${project.links.github}" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-gray-900 dark:bg-gray-800 text-white rounded-xl font-semibold hover:bg-gray-800 dark:hover:bg-gray-700 transition-all text-sm shadow-subtle">
                 <i class="fab fa-github mr-2"></i>GitHub
               </a>
             ` : ''}
             ${project.links.dashboard ? `
-              <a href="${project.links.dashboard}" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all text-sm shadow-subtle">
+              <a href="${project.links.dashboard}" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-blue-600 dark:bg-blue-700 text-white rounded-xl font-semibold hover:bg-blue-700 dark:hover:bg-blue-800 transition-all text-sm shadow-subtle">
                 <i class="fas fa-external-link-alt mr-2"></i>Dashboard
               </a>
             ` : ''}
             ${project.links.presentation ? `
-              <a href="${project.links.presentation}" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-red-600 text-white rounded-xl font-semibold hover:bg-red-700 transition-all text-sm shadow-subtle">
+              <a href="${project.links.presentation}" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-red-600 dark:bg-red-700 text-white rounded-xl font-semibold hover:bg-red-700 dark:hover:bg-red-800 transition-all text-sm shadow-subtle">
                 <i class="fas fa-presentation mr-2"></i>PPT
               </a>
             ` : ''}
             ${project.links.demo ? `
-              <a href="${project.links.demo}" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition-all text-sm shadow-subtle">
+              <a href="${project.links.demo}" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-green-600 dark:bg-green-700 text-white rounded-xl font-semibold hover:bg-green-700 dark:hover:bg-green-800 transition-all text-sm shadow-subtle">
                 <i class="fas fa-play-circle mr-2"></i>Demo
               </a>
             ` : ''}
             ${project.links.article ? `
-              <a href="${project.links.article}" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition-all text-sm shadow-subtle">
+              <a href="${project.links.article}" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-green-600 dark:bg-green-700 text-white rounded-xl font-semibold hover:bg-green-700 dark:hover:bg-green-800 transition-all text-sm shadow-subtle">
                 <i class="fab fa-medium mr-2"></i>Article
               </a>
             ` : ''}
@@ -343,20 +385,20 @@ function loadExperience() {
 
   container.innerHTML = displayData.map(exp => `
         <div class="timeline-item fade-in">
-          <div class="bg-white rounded-2xl p-6 shadow-subtle border border-gray-100 hover:shadow-medium transition-all">
+          <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-subtle border border-gray-100 dark:border-gray-700 hover:shadow-medium transition-all">
             <div class="flex justify-between items-start mb-3 flex-wrap gap-2">
-              <h3 class="text-lg font-bold text-gray-900">
+              <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100">
                 ${currentLang === 'en' ? exp.title : exp.titleId}
               </h3>
-              <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">
+              <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 rounded-full text-sm font-semibold">
                 ${exp.period}
               </span>
             </div>
             <ul class="space-y-2">
               ${(currentLang === 'en' ? exp.items : exp.itemsId).map(item => `
                 <li class="flex items-start gap-3">
-                  <i class="fas fa-chevron-right text-blue-500 mt-1 text-xs"></i>
-                  <span class="text-gray-700 text-sm">${item}</span>
+                  <i class="fas fa-chevron-right text-blue-500 dark:text-blue-300 mt-1 text-xs"></i>
+                  <span class="text-gray-700 dark:text-gray-300 text-sm">${item}</span>
                 </li>
               `).join('')}
             </ul>
@@ -398,16 +440,16 @@ function loadCertificates() {
   const displayData = showAllCertificates ? certificatesData : certificatesData.slice(0, INITIAL_ITEMS_COUNT);
 
   container.innerHTML = displayData.map(cert => `
-        <div class="bg-white rounded-2xl p-6 shadow-subtle border border-gray-100 card-hover fade-in">
-          <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-4 shadow-subtle">
+        <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-subtle border border-gray-100 dark:border-gray-700 card-hover fade-in">
+          <div class="w-14 h-14 bg-blue-600 dark:bg-blue-800 rounded-xl flex items-center justify-center mb-4 shadow-subtle">
             <i class="fas fa-certificate text-2xl text-white"></i>
           </div>
-          <h3 class="text-base font-bold text-gray-900 mb-2 leading-snug">
+          <h3 class="text-base font-bold text-gray-900 dark:text-gray-100 mb-2 leading-snug">
             ${currentLang === 'en' ? cert.title : cert.titleId}
           </h3>
-          <p class="text-gray-600 mb-1 font-medium text-sm">${cert.organization}</p>
-          <p class="text-sm text-gray-500 mb-4">${cert.year}</p>
-          <a href="${cert.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold transition-all text-sm">
+          <p class="text-gray-600 dark:text-gray-300 mb-1 font-medium text-sm">${cert.organization}</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">${cert.year}</p>
+          <a href="${cert.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-400 font-semibold transition-all text-sm">
             <i class="fas fa-external-link-alt text-xs"></i>
             ${currentLang === 'en' ? 'Verify Certificate' : 'Verifikasi Sertifikat'}
           </a>

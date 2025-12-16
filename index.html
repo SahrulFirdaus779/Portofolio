@@ -20,46 +20,61 @@
     "url": "https://sahrulfirdaus.com"
   }
   </script>
-  <script src="/_sdk/element_sdk.js"></script>
+  <!-- <script src="/_sdk/element_sdk.js"></script> -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'cream-bg': 'var(--cream-bg)',
+            'cream-light': 'var(--cream-light)',
+            'blue-primary': 'var(--blue-primary)',
+            'blue-dark': 'var(--blue-dark)',
+          }
+        }
+      }
+    }
+  </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><!-- Google Fonts - Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
  </head>
- <body>
-  <nav class="fixed top-0 w-full bg-white bg-opacity-98 backdrop-blur-md shadow-sm z-50 transition-all duration-300 border-b border-gray-100">
+ <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+  <nav class="fixed top-0 w-full bg-white bg-opacity-98 dark:bg-gray-900 dark:bg-opacity-98 backdrop-blur-md shadow-sm z-50 transition-all duration-300 border-b border-gray-100 dark:border-gray-800">
    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16"><a href="#home" class="text-2xl font-bold gradient-text">SAFIER</a>
-     <div class="hidden md:flex items-center space-x-8"><a href="#home" class="nav-link text-gray-700 font-medium hover:text-blue-600" data-en="Home" data-id="Beranda">Home</a> <a href="#about" class="nav-link text-gray-700 font-medium hover:text-blue-600" data-en="About" data-id="Tentang">About</a> <a href="#skills" class="nav-link text-gray-700 font-medium hover:text-blue-600" data-en="Skills" data-id="Keahlian">Skills</a> <a href="#portfolio" class="nav-link text-gray-700 font-medium hover:text-blue-600" data-en="Portfolio" data-id="Portofolio">Portfolio</a> <a href="#experience" class="nav-link text-gray-700 font-medium hover:text-blue-600" data-en="Experience" data-id="Pengalaman">Experience</a> <a href="#certificates" class="nav-link text-gray-700 font-medium hover:text-blue-600" data-en="Certificates" data-id="Sertifikat">Certificates</a> <a href="#contact" class="nav-link text-gray-700 font-medium hover:text-blue-600" data-en="Contact" data-id="Kontak">Contact</a>
+     <div class="hidden md:flex items-center space-x-8"><a href="#home" class="nav-link text-gray-700 dark:text-gray-300 font-medium hover:text-blue-600 dark:hover:text-blue-400" data-en="Home" data-id="Beranda">Home</a> <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 font-medium hover:text-blue-600 dark:hover:text-blue-400" data-en="About" data-id="Tentang">About</a> <a href="#skills" class="nav-link text-gray-700 dark:text-gray-300 font-medium hover:text-blue-600 dark:hover:text-blue-400" data-en="Skills" data-id="Keahlian">Skills</a> <a href="#portfolio" class="nav-link text-gray-700 dark:text-gray-300 font-medium hover:text-blue-600 dark:hover:text-blue-400" data-en="Portfolio" data-id="Portofolio">Portfolio</a> <a href="#experience" class="nav-link text-gray-700 dark:text-gray-300 font-medium hover:text-blue-600 dark:hover:text-blue-400" data-en="Experience" data-id="Pengalaman">Experience</a> <a href="#certificates" class="nav-link text-gray-700 dark:text-gray-300 font-medium hover:text-blue-600 dark:hover:text-blue-400" data-en="Certificates" data-id="Sertifikat">Certificates</a> <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 font-medium hover:text-blue-600 dark:hover:text-blue-400" data-en="Contact" data-id="Kontak">Contact</a>
      </div>
-     <div class="flex items-center space-x-3"><button id="langToggle" class="px-3 py-1.5 text-sm font-medium text-gray-700 border border-gray-300 rounded-full hover:bg-gray-50 hover:border-blue-300 transition-all"> EN </button> <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-100 transition-all"> <i class="fas fa-moon text-gray-700"></i> </button> <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100"> <i class="fas fa-bars text-gray-700"></i> </button>
+     <div class="flex items-center space-x-3"><button id="langToggle" class="px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-full hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-blue-300 transition-all"> EN </button> <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all"> <i id="darkModeIcon" class="fas fa-moon text-gray-700"></i> </button> <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"> <i class="fas fa-bars text-gray-700 dark:text-gray-300"></i> </button>
      </div>
     </div>
    </div><!-- Mobile Menu -->
    <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-100 py-4">
-    <div class="flex flex-col space-y-3 px-4"><a href="#home" class="nav-link text-gray-700 font-medium hover:text-blue-600" data-en="Home" data-id="Beranda">Home</a> <a href="#about" class="nav-link text-gray-700 font-medium hover:text-blue-600" data-en="About" data-id="Tentang">About</a> <a href="#skills" class="nav-link text-gray-700 font-medium hover:text-blue-600" data-en="Skills" data-id="Keahlian">Skills</a> <a href="#portfolio" class="nav-link text-gray-700 font-medium hover:text-blue-600" data-en="Portfolio" data-id="Portofolio">Portfolio</a> <a href="#experience" class="nav-link text-gray-700 font-medium hover:text-blue-600" data-en="Experience" data-id="Pengalaman">Experience</a> <a href="#certificates" class="nav-link text-gray-700 font-medium hover:text-blue-600" data-en="Certificates" data-id="Sertifikat">Certificates</a> <a href="#contact" class="nav-link text-gray-700 font-medium hover:text-blue-600" data-en="Contact" data-id="Kontak">Contact</a>
+    <div class="flex flex-col space-y-3 px-4"><a href="#home" class="nav-link text-gray-700 dark:text-gray-300 font-medium hover:text-blue-600 dark:hover:text-blue-400" data-en="Home" data-id="Beranda">Home</a> <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 font-medium hover:text-blue-600 dark:hover:text-blue-400" data-en="About" data-id="Tentang">About</a> <a href="#skills" class="nav-link text-gray-700 dark:text-gray-300 font-medium hover:text-blue-600 dark:hover:text-blue-400" data-en="Skills" data-id="Keahlian">Skills</a> <a href="#portfolio" class="nav-link text-gray-700 dark:text-gray-300 font-medium hover:text-blue-600 dark:hover:text-blue-400" data-en="Portfolio" data-id="Portofolio">Portfolio</a> <a href="#experience" class="nav-link text-gray-700 dark:text-gray-300 font-medium hover:text-blue-600 dark:hover:text-blue-400" data-en="Experience" data-id="Pengalaman">Experience</a> <a href="#certificates" class="nav-link text-gray-700 dark:text-gray-300 font-medium hover:text-blue-600 dark:hover:text-blue-400" data-en="Certificates" data-id="Sertifikat">Certificates</a> <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 font-medium hover:text-blue-600 dark:hover:text-blue-400" data-en="Contact" data-id="Kontak">Contact</a>
     </div>
    </div>
   </nav><!-- Hero Section -->
-  <section id="home" class="relative bg-cream-bg py-20 md:py-32 overflow-hidden">
+  <section id="home" class="relative bg-cream-bg dark:bg-gray-900 py-20 md:py-32 overflow-hidden transition-colors duration-300">
    <canvas id="heroCanvas" class="absolute top-0 left-0 w-full h-full z-0"></canvas>
    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="grid md:grid-cols-2 gap-12 items-center">
      <div class="fade-in">
-      <h1 id="heroName" class="text-5xl md:text-6xl font-bold text-gray-900 mb-4 tracking-tight">Sahrul Firdaus</h1>
+      <h1 id="heroName" class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">Sahrul Firdaus</h1>
       <div class="flex items-center gap-3 mb-6">
        <div class="h-1 w-12 bg-blue-600 rounded"></div>
-       <p id="heroRole" class="text-xl md:text-2xl font-semibold text-gray-700" data-en="Aspiring Data Analyst" data-id=" Penggemar Data">Data Enthusiast</p>
+       <p id="heroRole" class="text-xl md:text-2xl font-semibold text-gray-700 dark:text-gray-300" data-en="Aspiring Data Analyst" data-id=" Penggemar Data">Data Enthusiast</p>
       </div>
       <p id="heroTagline" class="text-2xl md:text-3xl gradient-text font-bold mb-6">Think, Learn, Do It</p>
-      <p id="heroValueStatement" class="text-lg text-gray-600 mb-8 leading-relaxed" data-en="Turning raw data into meaningful decisions through analysis, visualization, and storytelling." data-id="Mengubah data mentah menjadi keputusan bermakna melalui analisis, visualisasi, dan storytelling.">Turning raw data into meaningful decisions through analysis, visualization, and storytelling.</p>
+      <p id="heroValueStatement" class="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed" data-en="Turning raw data into meaningful decisions through analysis, visualization, and storytelling." data-id="Mengubah data mentah menjadi keputusan bermakna melalui analisis, visualisasi, dan storytelling.">Turning raw data into meaningful decisions through analysis, visualization, and storytelling.</p>
       <div class="flex flex-wrap gap-4 mb-8"><a href="#portfolio" class="btn-primary px-7 py-3.5 rounded-xl font-semibold shadow-subtle text-white">
         <svg class="w-5 h-5 inline-block mr-2 -mt-1 text-white" fill="currentColor" viewbox="0 0 20 20"><path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z" />
-        </svg><span class="text-white" data-en="View Projects" data-id="Lihat Proyek">View Projects</span> </a> <a href="https://drive.google.com/uc?export=download&amp;id=12a7dJC-4Mof9ct6-Ksv_lLyOi9qXa03e" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 bg-white text-gray-700 rounded-xl font-semibold border border-gray-300 hover:border-blue-400 hover:text-blue-600 transition-all shadow-subtle">
+        </svg><span class="text-white" data-en="View Projects" data-id="Lihat Proyek">View Projects</span> </a> <a href="https://drive.google.com/uc?export=download&amp;id=12a7dJC-4Mof9ct6-Ksv_lLyOi9qXa03e" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 bg-white text-gray-700 dark:text-gray-900 rounded-xl font-semibold border border-gray-300 hover:border-blue-400 hover:text-blue-600 transition-all shadow-subtle">
         <svg class="w-5 h-5 inline-block mr-2 -mt-1" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
-        </svg><span data-en="Download CV" data-id="Unduh CV">Download CV</span> </a> <a href="#contact" class="btn-secondary px-7 py-3.5 rounded-xl font-semibold shadow-subtle text-white">
+        </svg><span class="text-gray-700 dark:text-gray-900" data-en="Download CV" data-id="Unduh CV">Download CV</span> </a> <a href="#contact" class="btn-secondary px-7 py-3.5 rounded-xl font-semibold shadow-subtle text-white">
         <svg class="w-5 h-5 inline-block mr-2 -mt-1 text-white" fill="currentColor" viewbox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /> <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
         </svg><span class="text-white" data-en="Contact Me" data-id="Hubungi Saya">Contact Me</span> </a>
       </div>
@@ -76,7 +91,7 @@
      </div>
      <div class="relative fade-in-delay-1 parallax-layer">
       <div class="relative z-10">
-       <div class="w-full max-w-lg mx-auto aspect-square rounded-2xl p-8 shadow-subtle border border-gray-200" style="background: #FFFFFF;">
+      <div class="w-full max-w-lg mx-auto aspect-square rounded-2xl p-8 shadow-subtle border border-gray-200 bg-white dark:bg-gray-800 transition-colors duration-300">
         <div class="w-full h-full rounded-xl bg-gradient-to-br from-blue-50 to-white flex items-center justify-center border border-blue-100">
          <svg viewbox="0 0 400 400" class="w-full h-full"><!-- Background circles --> <circle cx="200" cy="200" r="180" fill="#2563EB" opacity="0.04" /> <circle cx="200" cy="200" r="140" fill="#2563EB" opacity="0.06" /> <!-- Data visualization --> <g opacity="0.9">
            <rect x="70" y="250" width="30" height="100" fill="#2563EB" rx="4" />
@@ -98,10 +113,10 @@
    </div>
   </section>
   <div class="section-divider"></div><!-- About Section -->
-  <section id="about" class="py-20 bg-white">
+  <section id="about" class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16 fade-in">
-     <h2 id="aboutTitle" class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-en="About Me" data-id="Tentang Saya">About Me</h2>
+     <h2 id="aboutTitle" class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4" data-en="About Me" data-id="Tentang Saya">About Me</h2>
      <div class="w-20 h-1 bg-blue-600 mx-auto rounded"></div>
     </div>
     <div class="max-w-5xl mx-auto"><!-- Photo Profile Section -->
@@ -121,15 +136,15 @@
       </div>
      </div>
      <div class="grid md:grid-cols-3 gap-6 mb-12">
-      <div class="stat-card rounded-2xl p-6 text-center fade-in-delay-1 shadow-subtle">
+      <div class="stat-card rounded-2xl p-6 text-center fade-in-delay-1 shadow-subtle bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 transition-colors duration-300">
        <div class="text-4xl font-bold gradient-text mb-2">
         3+
        </div>
-       <div class="text-gray-600 font-medium text-sm" data-en="Real Projects" data-id="Proyek Nyata">
+       <div class="text-gray-600 dark:text-gray-400 font-medium text-sm" data-en="Real Projects" data-id="Proyek Nyata">
         Real Projects
        </div>
       </div>
-      <div class="stat-card rounded-2xl p-6 text-center fade-in-delay-2 shadow-subtle">
+      <div class="stat-card rounded-2xl p-6 text-center fade-in-delay-2 shadow-subtle bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 transition-colors duration-300">
        <div class="text-4xl font-bold gradient-text mb-2">
         10+
        </div>
@@ -137,7 +152,7 @@
         Tools Mastered
        </div>
       </div>
-      <div class="stat-card rounded-2xl p-6 text-center fade-in-delay-3 shadow-subtle">
+      <div class="stat-card rounded-2xl p-6 text-center fade-in-delay-3 shadow-subtle bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 transition-colors duration-300">
        <div class="text-4xl font-bold gradient-text mb-2">
         100%
        </div>
@@ -146,64 +161,64 @@
        </div>
       </div>
      </div>
-     <div class="bg-gray-50 rounded-2xl p-8 md:p-10 shadow-subtle border border-gray-100 fade-in">
+    <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 md:p-10 shadow-subtle border border-gray-100 dark:border-gray-700 fade-in transition-colors duration-300">
       <div class="prose max-w-none">
-       <p class="text-base text-gray-700 leading-relaxed mb-5" data-en="My journey with data began with a simple curiosity: What stories hide behind the numbers? This question led me down a path of discovery where every dataset became a mystery waiting to be solved, and every insight felt like unlocking a secret door to better decision-making." data-id="Perjalanan saya dengan data dimulai dari rasa ingin tahu sederhana: Cerita apa yang tersembunyi di balik angka-angka? Pertanyaan ini membawa saya ke jalur penemuan di mana setiap dataset menjadi misteri yang menunggu dipecahkan, dan setiap insight terasa seperti membuka pintu rahasia untuk pengambilan keputusan yang lebih baik.">My journey with data began with a simple curiosity: <strong>What stories hide behind the numbers?</strong> This question led me down a path of discovery where every dataset became a mystery waiting to be solved, and every insight felt like unlocking a secret door to better decision-making.</p>
-       <p class="text-base text-gray-700 leading-relaxed mb-5" data-en="I believe that data analysis is not just about crunching numbers—it's about understanding context, asking the right questions, and translating complex patterns into actionable insights that people can actually use. Whether it's identifying sales trends in retail data, analyzing social phenomena through statistics, or forecasting disasters to save lives, I approach every project with the mindset that every dataset has a story worth telling." data-id="Saya percaya bahwa analisis data bukan hanya tentang mengolah angka—ini tentang memahami konteks, mengajukan pertanyaan yang tepat, dan menerjemahkan pola kompleks menjadi insight yang dapat ditindaklanjuti yang benar-benar dapat digunakan orang. Baik mengidentifikasi tren penjualan dalam data ritel, menganalisis fenomena sosial melalui statistik, atau memprediksi bencana untuk menyelamatkan nyawa, saya mendekati setiap proyek dengan pola pikir bahwa setiap dataset memiliki cerita yang layak diceritakan.">I believe that data analysis is not just about crunching numbers—it's about <strong>understanding context, asking the right questions</strong>, and translating complex patterns into actionable insights that people can actually use. Whether it's identifying sales trends in retail data, analyzing social phenomena through statistics, or forecasting disasters to save lives, I approach every project with the mindset that <strong>every dataset has a story worth telling</strong>.</p>
-       <p class="text-base text-gray-700 leading-relaxed mb-5" data-en="My philosophy is captured in three words: Think, Learn, Do It. I think critically about problems before diving into solutions. I learn continuously from every project, every mistake, and every breakthrough. And most importantly, I do it—I take action, build solutions, and deliver results. This isn't just a tagline; it's how I approach every challenge in data science and life." data-id="Filosofi saya terangkum dalam tiga kata: Think, Learn, Do It. Saya berpikir kritis tentang masalah sebelum terjun ke solusi. Saya belajar terus-menerus dari setiap proyek, setiap kesalahan, dan setiap terobosan. Dan yang paling penting, saya melakukannya—saya mengambil tindakan, membangun solusi, dan memberikan hasil. Ini bukan hanya tagline; ini bagaimana saya mendekati setiap tantangan dalam ilmu data dan kehidupan.">My philosophy is captured in three words: <strong>Think, Learn, Do It</strong>. I think critically about problems before diving into solutions. I learn continuously from every project, every mistake, and every breakthrough. And most importantly, I do it—I take action, build solutions, and deliver results. This isn't just a tagline; it's how I approach every challenge in data science and life.</p>
-       <p class="text-base text-gray-700 leading-relaxed" data-en="Right now, I'm actively seeking internship opportunities in Data Analytics and Machine Learning where I can contribute fresh perspectives, bring data-driven solutions to real business problems, and grow alongside experienced professionals. I want to be part of a team that values curiosity, embraces data as a strategic asset, and believes in the power of storytelling through analytics. If you're looking for someone who combines technical skills with genuine passion for turning data into impact, I'd love to connect." data-id="Saat ini, saya secara aktif mencari peluang magang dalam Analitik Data dan Pembelajaran Mesin di mana saya dapat berkontribusi dengan perspektif segar, membawa solusi berbasis data untuk masalah bisnis nyata, dan berkembang bersama profesional berpengalaman. Saya ingin menjadi bagian dari tim yang menghargai rasa ingin tahu, merangkul data sebagai aset strategis, dan percaya pada kekuatan storytelling melalui analitik. Jika Anda mencari seseorang yang menggabungkan keterampilan teknis dengan passion asli untuk mengubah data menjadi dampak, saya ingin terhubung.">Right now, I'm actively seeking <strong>internship opportunities in Data Analytics and Machine Learning</strong> where I can contribute fresh perspectives, bring data-driven solutions to real business problems, and grow alongside experienced professionals. I want to be part of a team that values curiosity, embraces data as a strategic asset, and believes in the power of storytelling through analytics. If you're looking for someone who combines technical skills with genuine passion for turning data into impact, I'd love to connect.</p>
+       <p class="text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-5" data-en="My journey with data began with a simple curiosity: What stories hide behind the numbers? This question led me down a path of discovery where every dataset became a mystery waiting to be solved, and every insight felt like unlocking a secret door to better decision-making." data-id="Perjalanan saya dengan data dimulai dari rasa ingin tahu sederhana: Cerita apa yang tersembunyi di balik angka-angka? Pertanyaan ini membawa saya ke jalur penemuan di mana setiap dataset menjadi misteri yang menunggu dipecahkan, dan setiap insight terasa seperti membuka pintu rahasia untuk pengambilan keputusan yang lebih baik.">My journey with data began with a simple curiosity: <strong>What stories hide behind the numbers?</strong> This question led me down a path of discovery where every dataset became a mystery waiting to be solved, and every insight felt like unlocking a secret door to better decision-making.</p>
+       <p class="text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-5" data-en="I believe that data analysis is not just about crunching numbers—it's about understanding context, asking the right questions, and translating complex patterns into actionable insights that people can actually use. Whether it's identifying sales trends in retail data, analyzing social phenomena through statistics, or forecasting disasters to save lives, I approach every project with the mindset that every dataset has a story worth telling." data-id="Saya percaya bahwa analisis data bukan hanya tentang mengolah angka—ini tentang memahami konteks, mengajukan pertanyaan yang tepat, dan menerjemahkan pola kompleks menjadi insight yang dapat ditindaklanjuti yang benar-benar dapat digunakan orang. Baik mengidentifikasi tren penjualan dalam data ritel, menganalisis fenomena sosial melalui statistik, atau memprediksi bencana untuk menyelamatkan nyawa, saya mendekati setiap proyek dengan pola pikir bahwa setiap dataset memiliki cerita yang layak diceritakan.">I believe that data analysis is not just about crunching numbers—it's about <strong>understanding context, asking the right questions</strong>, and translating complex patterns into actionable insights that people can actually use. Whether it's identifying sales trends in retail data, analyzing social phenomena through statistics, or forecasting disasters to save lives, I approach every project with the mindset that <strong>every dataset has a story worth telling</strong>.</p>
+       <p class="text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-5" data-en="My philosophy is captured in three words: Think, Learn, Do It. I think critically about problems before diving into solutions. I learn continuously from every project, every mistake, and every breakthrough. And most importantly, I do it—I take action, build solutions, and deliver results. This isn't just a tagline; it's how I approach every challenge in data science and life." data-id="Filosofi saya terangkum dalam tiga kata: Think, Learn, Do It. Saya berpikir kritis tentang masalah sebelum terjun ke solusi. Saya belajar terus-menerus dari setiap proyek, setiap kesalahan, dan setiap terobosan. Dan yang paling penting, saya melakukannya—saya mengambil tindakan, membangun solusi, dan memberikan hasil. Ini bukan hanya tagline; ini bagaimana saya mendekati setiap tantangan dalam ilmu data dan kehidupan.">My philosophy is captured in three words: <strong>Think, Learn, Do It</strong>. I think critically about problems before diving into solutions. I learn continuously from every project, every mistake, and every breakthrough. And most importantly, I do it—I take action, build solutions, and deliver results. This isn't just a tagline; it's how I approach every challenge in data science and life.</p>
+       <p class="text-base text-gray-700 dark:text-gray-300 leading-relaxed" data-en="Right now, I'm actively seeking internship opportunities in Data Analytics and Machine Learning where I can contribute fresh perspectives, bring data-driven solutions to real business problems, and grow alongside experienced professionals. I want to be part of a team that values curiosity, embraces data as a strategic asset, and believes in the power of storytelling through analytics. If you're looking for someone who combines technical skills with genuine passion for turning data into impact, I'd love to connect." data-id="Saat ini, saya secara aktif mencari peluang magang dalam Analitik Data dan Pembelajaran Mesin di mana saya dapat berkontribusi dengan perspektif segar, membawa solusi berbasis data untuk masalah bisnis nyata, dan berkembang bersama profesional berpengalaman. Saya ingin menjadi bagian dari tim yang menghargai rasa ingin tahu, merangkul data sebagai aset strategis, dan percaya pada kekuatan storytelling melalui analitik. Jika Anda mencari seseorang yang menggabungkan keterampilan teknis dengan passion asli untuk mengubah data menjadi dampak, saya ingin terhubung.">Right now, I'm actively seeking <strong>internship opportunities in Data Analytics and Machine Learning</strong> where I can contribute fresh perspectives, bring data-driven solutions to real business problems, and grow alongside experienced professionals. I want to be part of a team that values curiosity, embraces data as a strategic asset, and believes in the power of storytelling through analytics. If you're looking for someone who combines technical skills with genuine passion for turning data into impact, I'd love to connect.</p>
       </div>
      </div>
     </div>
    </div>
   </section>
   <div class="section-divider"></div><!-- Skills Section -->
-  <section id="skills" class="py-20 bg-gray-50">
+  <section id="skills" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16 fade-in">
-     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-en="Skills &amp; Expertise" data-id="Keahlian &amp; Expertise">Skills &amp; Expertise</h2>
-     <div class="w-20 h-1 bg-blue-600 mx-auto rounded"></div>
-    </div>
+     <div class="text-center mb-16 fade-in">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4" data-en="Skills &amp; Expertise" data-id="Keahlian &amp; Expertise">Skills &amp; Expertise</h2>
+      <div class="w-20 h-1 bg-blue-600 mx-auto rounded"></div>
+     </div>
     <div class="grid md:grid-cols-3 gap-6"><!-- Core Skills -->
-     <div class="bg-white rounded-2xl p-8 shadow-subtle border border-gray-100 card-hover fade-in-delay-1">
+    <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-subtle border border-gray-100 dark:border-gray-700 card-hover fade-in-delay-1 transition-colors duration-300">
       <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-5 shadow-subtle">
        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
        </svg>
-      </div>
-      <h3 class="text-xl font-bold text-gray-900 mb-4" data-en="Core Skills" data-id="Keahlian Inti">Core Skills</h3>
-      <div class="flex flex-wrap gap-2"><span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Data Analysis</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Data Science</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Machine Learning</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Analytical Skills</span><span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Data Mining</span><span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Communication</span>
+       </div>
+       <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4" data-en="Core Skills" data-id="Keahlian Inti">Core Skills</h3>
+       <div class="flex flex-wrap gap-2"><span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Data Analysis</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Data Science</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Machine Learning</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Analytical Skills</span><span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Data Mining</span><span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Communication</span>
       </div>
      </div><!-- Tools & Tech -->
-     <div class="bg-white rounded-2xl p-8 shadow-subtle border border-gray-100 card-hover fade-in-delay-2">
+    <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-subtle border border-gray-100 dark:border-gray-700 card-hover fade-in-delay-2 transition-colors duration-300">
       <div class="w-14 h-14 bg-blue-700 rounded-xl flex items-center justify-center mb-5 shadow-subtle">
        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
        </svg>
-      </div>
-      <h3 class="text-xl font-bold text-gray-900 mb-4" data-en="Tools &amp; Technologies" data-id="Tools &amp; Teknologi">Tools &amp; Technologies</h3>
-      <div class="flex flex-wrap gap-2"><span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Python</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Excel/Spreadsheet</span> 
+       </div>
+       <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4" data-en="Tools &amp; Technologies" data-id="Tools &amp; Teknologi">Tools &amp; Technologies</h3>
+       <div class="flex flex-wrap gap-2"><span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Python</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Excel/Spreadsheet</span> 
          <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Git</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">SQL</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Spreadsheet</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">KNIME</span>  <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Lookerstudio</span>  <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Colab</span>  <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Power BI</span>  <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Tableau</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">NumPy</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Scikit-Learn</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Matplotlib</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Seaborn</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Plotly</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Streamlit</span>
       </div>
      </div><!-- Soft Skills -->
-     <div class="bg-white rounded-2xl p-8 shadow-subtle border border-gray-100 card-hover fade-in-delay-3">
+    <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-subtle border border-gray-100 dark:border-gray-700 card-hover fade-in-delay-3 transition-colors duration-300">
       <div class="w-14 h-14 bg-blue-800 rounded-xl flex items-center justify-center mb-5 shadow-subtle">
        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
        </svg>
-      </div>
-      <h3 class="text-xl font-bold text-gray-900 mb-4" data-en="Soft Skills" data-id="Soft Skills">Soft Skills</h3>
-      <div class="flex flex-wrap gap-2"><span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Critical Thinking</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Communication</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Storytelling</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Leadership</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Report Writing</span><span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Collaboration</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Problem Solving</span>
+       </div>
+       <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4" data-en="Soft Skills" data-id="Soft Skills">Soft Skills</h3>
+       <div class="flex flex-wrap gap-2"><span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Critical Thinking</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Communication</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Storytelling</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Leadership</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Report Writing</span><span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Collaboration</span> <span class="skill-badge px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">Problem Solving</span>
       </div>
      </div>
     </div>
    </div>
   </section>
   <div class="section-divider"></div><!-- Portfolio Section -->
-  <section id="portfolio" class="py-20 bg-white">
+  <section id="portfolio" class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16 fade-in">
-     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-en="Featured Projects" data-id="Proyek Unggulan">Featured Projects</h2>
-     <div class="w-20 h-1 bg-blue-600 mx-auto rounded mb-3"></div>
-     <p class="text-base text-gray-600 max-w-3xl mx-auto" data-en="Real-world data projects showcasing analytical thinking, technical skills, and storytelling ability" data-id="Proyek data dunia nyata yang menampilkan pemikiran analitis, keterampilan teknis, dan kemampuan storytelling">Real-world data projects showcasing analytical thinking, technical skills, and storytelling ability</p>
-    </div>
+     <div class="text-center mb-16 fade-in">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4" data-en="Featured Projects" data-id="Proyek Unggulan">Featured Projects</h2>
+      <div class="w-20 h-1 bg-blue-600 mx-auto rounded mb-3"></div>
+      <p class="text-base text-gray-600 dark:text-gray-400 max-w-3xl mx-auto" data-en="Real-world data projects showcasing analytical thinking, technical skills, and storytelling ability" data-id="Proyek data dunia nyata yang menampilkan pemikiran analitis, keterampilan teknis, dan kemampuan storytelling">Real-world data projects showcasing analytical thinking, technical skills, and storytelling ability</p>
+     </div>
     <div id="projectsContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"><!-- Loading Skeletons will be shown here initially -->
     </div>
     <div id="projectsViewMore" class="text-center mt-10 hidden"><button onclick="toggleProjectsView()" class="px-8 py-3.5 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-subtle hover:shadow-medium hover:scale-105"> <i class="fas fa-plus-circle mr-2 text-white"></i> <span class="text-white" data-en="View More Projects" data-id="Lihat Lebih Banyak Proyek">View More Projects</span> </button>
@@ -213,13 +228,13 @@
    </div>
   </section>
   <div class="section-divider"></div><!-- Experience Section -->
-  <section id="experience" class="py-20 bg-gray-50">
+  <section id="experience" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16 fade-in">
-     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-en="Learning Journey" data-id="Perjalanan Belajar">Learning Journey</h2>
-     <div class="w-20 h-1 bg-blue-600 mx-auto rounded mb-3"></div>
-     <p class="text-base text-gray-600" data-en="Project-based learning experiences and practical applications" data-id="Pengalaman belajar berbasis proyek dan aplikasi praktis">Project-based learning experiences and practical applications</p>
-    </div>
+     <div class="text-center mb-16 fade-in">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4" data-en="Learning Journey" data-id="Perjalanan Belajar">Learning Journey</h2>
+      <div class="w-20 h-1 bg-blue-600 mx-auto rounded mb-3"></div>
+      <p class="text-base text-gray-600 dark:text-gray-400" data-en="Project-based learning experiences and practical applications" data-id="Pengalaman belajar berbasis proyek dan aplikasi praktis">Project-based learning experiences and practical applications</p>
+     </div>
     <div class="max-w-4xl mx-auto">
      <div id="experienceContainer" class="timeline"><!-- Experience items will be loaded here -->
      </div>
@@ -231,11 +246,11 @@
    </div>
   </section>
   <div class="section-divider"></div><!-- Certificates Section -->
-  <section id="certificates" class="py-20 bg-white">
+  <section id="certificates" class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16 fade-in">
-     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-en="Certificates &amp; Achievements" data-id="Sertifikat &amp; Pencapaian">Certificates &amp; Achievements</h2>
-     <div class="w-20 h-1 bg-blue-600 mx-auto rounded"></div>
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4" data-en="Certificates &amp; Achievements" data-id="Sertifikat &amp; Pencapaian">Certificates &amp; Achievements</h2>
+      <div class="w-20 h-1 bg-blue-600 mx-auto rounded"></div>
     </div>
     <div id="certificatesContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"><!-- Certificates will be loaded here -->
     </div>
@@ -246,61 +261,61 @@
    </div>
   </section>
   <div class="section-divider"></div><!-- Contact Section -->
-  <section id="contact" class="py-20 bg-gray-50">
+  <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16 fade-in">
-     <h2 id="contactTitle" class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-en="Let's Connect" data-id="Mari Terhubung">Let's Connect</h2>
-     <div class="w-20 h-1 bg-blue-600 mx-auto rounded mb-3"></div>
-     <p id="contactSubtitle" class="text-base text-gray-600 max-w-2xl mx-auto" data-en="I'm actively seeking data analyst internship opportunities. Let's discuss how I can contribute to your team!" data-id="Saya aktif mencari peluang magang data analyst. Mari diskusikan bagaimana saya dapat berkontribusi untuk tim Anda!">I'm actively seeking data analyst internship opportunities. Let's discuss how I can contribute to your team!</p>
+      <h2 id="contactTitle" class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4" data-en="Let's Connect" data-id="Mari Terhubung">Let's Connect</h2>
+      <div class="w-20 h-1 bg-blue-600 mx-auto rounded mb-3"></div>
+      <p id="contactSubtitle" class="text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto" data-en="I'm actively seeking data analyst internship opportunities. Let's discuss how I can contribute to your team!" data-id="Saya aktif mencari peluang magang data analyst. Mari diskusikan bagaimana saya dapat berkontribusi untuk tim Anda!">I'm actively seeking data analyst internship opportunities. Let's discuss how I can contribute to your team!</p>
     </div>
     <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8"><!-- Contact Form -->
-     <div class="bg-white rounded-2xl p-8 shadow-subtle border border-gray-100 fade-in-delay-1">
-      <h3 class="text-2xl font-bold text-gray-900 mb-6" data-en="Send a Message" data-id="Kirim Pesan">Send a Message</h3>
+     <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-subtle border border-gray-100 dark:border-gray-700 fade-in-delay-1 transition-colors duration-300">
+      <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6" data-en="Send a Message" data-id="Kirim Pesan">Send a Message</h3>
       <form id="contactForm" class="space-y-5">
-       <div><label for="name" class="block text-sm font-semibold text-gray-700 mb-2" data-en="Your Name" data-id="Nama Anda">Your Name</label> <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" placeholder="John Doe">
+       <div><label for="name" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2" data-en="Your Name" data-id="Nama Anda">Your Name</label> <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all dark:bg-gray-700 dark:text-white" placeholder="John Doe">
        </div>
-       <div><label for="email" class="block text-sm font-semibold text-gray-700 mb-2" data-en="Email Address" data-id="Alamat Email">Email Address</label> <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" placeholder="john@company.com">
+       <div><label for="email" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2" data-en="Email Address" data-id="Alamat Email">Email Address</label> <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all dark:bg-gray-700 dark:text-white" placeholder="john@company.com">
        </div>
-       <div><label for="subject" class="block text-sm font-semibold text-gray-700 mb-2" data-en="Subject" data-id="Subjek">Subject</label> <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" placeholder="Internship Opportunity">
+       <div><label for="subject" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2" data-en="Subject" data-id="Subjek">Subject</label> <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all dark:bg-gray-700 dark:text-white" placeholder="Internship Opportunity">
        </div>
-       <div><label for="message" class="block text-sm font-semibold text-gray-700 mb-2" data-en="Message" data-id="Pesan">Message</label> <textarea id="message" name="message" required rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none" placeholder="Tell me about the opportunity..."></textarea>
+       <div><label for="message" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2" data-en="Message" data-id="Pesan">Message</label> <textarea id="message" name="message" required rows="5" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none dark:bg-gray-700 dark:text-white" placeholder="Tell me about the opportunity..."></textarea>
        </div><button type="submit" class="w-full btn-primary px-6 py-3.5 rounded-xl font-semibold shadow-subtle"> <i class="fas fa-paper-plane mr-2 text-white"></i> <span class="text-white" data-en="Send Message" data-id="Kirim Pesan">Send Message</span> </button>
       </form>
      </div><!-- Contact Info -->
      <div class="space-y-5 fade-in-delay-2">
-      <div class="bg-white rounded-2xl p-6 shadow-subtle border border-gray-100 hover:shadow-medium transition-all">
+      <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-subtle border border-gray-100 dark:border-gray-700 hover:shadow-medium transition-all transition-colors duration-300">
        <div class="flex items-start gap-4">
         <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-subtle"><i class="fas fa-envelope text-xl text-white"></i>
         </div>
         <div>
-         <h4 class="font-bold text-gray-900 mb-1.5 text-base" data-en="Email" data-id="Email">Email</h4><a href="mailto:muhammadsyahrulfirdaus22@gmail.com" class="text-gray-600 hover:text-blue-600 transition-all text-sm break-all"> muhammadsyahrulfirdaus22@gmail.com </a>
+         <h4 class="font-bold text-gray-900 dark:text-white mb-1.5 text-base" data-en="Email" data-id="Email">Email</h4><a href="mailto:muhammadsyahrulfirdaus22@gmail.com" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all text-sm break-all"> muhammadsyahrulfirdaus22@gmail.com </a>
         </div>
        </div>
       </div>
-      <div class="bg-white rounded-2xl p-6 shadow-subtle border border-gray-100 hover:shadow-medium transition-all">
+      <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-subtle border border-gray-100 dark:border-gray-700 hover:shadow-medium transition-all transition-colors duration-300">
        <div class="flex items-start gap-4">
         <div class="w-12 h-12 bg-blue-700 rounded-xl flex items-center justify-center flex-shrink-0 shadow-subtle"><i class="fab fa-linkedin text-xl text-white"></i>
         </div>
         <div>
-         <h4 class="font-bold text-gray-900 mb-1.5 text-base" data-en="LinkedIn" data-id="LinkedIn">LinkedIn</h4><a href="https://www.linkedin.com/in/sahrul-firdaus/" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition-all text-sm"> linkedin.com/in/sahrul-firdaus </a>
+         <h4 class="font-bold text-gray-900 dark:text-white mb-1.5 text-base" data-en="LinkedIn" data-id="LinkedIn">LinkedIn</h4><a href="https://www.linkedin.com/in/sahrul-firdaus/" target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all text-sm"> linkedin.com/in/sahrul-firdaus </a>
         </div>
        </div>
       </div>
-      <div class="bg-white rounded-2xl p-6 shadow-subtle border border-gray-100 hover:shadow-medium transition-all">
+      <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-subtle border border-gray-100 dark:border-gray-700 hover:shadow-medium transition-all transition-colors duration-300">
        <div class="flex items-start gap-4">
         <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center flex-shrink-0 shadow-subtle"><i class="fab fa-github text-xl text-white"></i>
         </div>
         <div>
-         <h4 class="font-bold text-gray-900 mb-1.5 text-base" data-en="GitHub" data-id="GitHub">GitHub</h4><a href="https://github.com/SahrulFirdaus779" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition-all text-sm"> github.com/SahrulFirdaus779 </a>
+         <h4 class="font-bold text-gray-900 dark:text-white mb-1.5 text-base" data-en="GitHub" data-id="GitHub">GitHub</h4><a href="https://github.com/SahrulFirdaus779" target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all text-sm"> github.com/SahrulFirdaus779 </a>
         </div>
        </div>
       </div>
-      <div class="bg-white rounded-2xl p-6 shadow-subtle border border-gray-100 hover:shadow-medium transition-all">
+      <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-subtle border border-gray-100 dark:border-gray-700 hover:shadow-medium transition-all transition-colors duration-300">
        <div class="flex items-start gap-4">
         <div class="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-subtle"><i class="fab fa-whatsapp text-xl text-white"></i>
         </div>
         <div>
-         <h4 class="font-bold text-gray-900 mb-1.5 text-base" data-en="WhatsApp" data-id="WhatsApp">WhatsApp</h4><a href="https://wa.me/62089527509633" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-green-600 transition-all text-sm"> +62 895-2750-9633 </a>
+         <h4 class="font-bold text-gray-900 dark:text-white mb-1.5 text-base" data-en="WhatsApp" data-id="WhatsApp">WhatsApp</h4><a href="https://wa.me/62089527509633" target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-500 transition-all text-sm"> +62 895-2750-9633 </a>
         </div>
        </div>
       </div><a href="https://drive.google.com/uc?export=download&amp;id=12a7dJC-4Mof9ct6-Ksv_lLyOi9qXa03e" target="_blank" rel="noopener noreferrer" class="block bg-blue-600 text-white rounded-2xl p-6 shadow-subtle text-center hover:shadow-medium hover:bg-blue-700 transition-all"> <i class="fas fa-download text-2xl mb-2"></i>
@@ -314,12 +329,25 @@
     </div>
    </div>
   </section><!-- Footer -->
-  <footer class="bg-gray-900 text-white py-12">
+  <footer class="py-12 bg-gray-900 text-white dark:bg-gray-900 dark:text-white transition-colors duration-300">
    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center">
      <h3 class="text-3xl font-bold mb-2">Sahrul Firdaus</h3>
      <p class="text-gray-400 mb-6 text-base" data-en="Think, Learn, Do It" data-id="Think, Learn, Do It">Think, Learn, Do It</p>
-     <div class="flex justify-center gap-4 mb-8"><a href="https://github.com/SahrulFirdaus779" target="_blank" rel="noopener noreferrer" class="w-11 h-11 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-all hover:scale-105"> <i class="fab fa-github text-lg"></i> </a> <a href="https://www.linkedin.com/in/sahrul-firdaus/" target="_blank" rel="noopener noreferrer" class="w-11 h-11 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all hover:scale-105"> <i class="fab fa-linkedin text-lg"></i> </a> <a href="mailto:muhammadsyahrulfirdaus22@gmail.com" class="w-11 h-11 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all hover:scale-105"> <i class="fas fa-envelope text-lg"></i> </a> <a href="https://wa.me/62089527509633" target="_blank" rel="noopener noreferrer" class="w-11 h-11 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition-all hover:scale-105"> <i class="fab fa-whatsapp text-lg"></i> </a>
+     <div class="flex justify-center gap-4 mb-8">
+      <a href="https://github.com/SahrulFirdaus779" target="_blank" rel="noopener noreferrer" class="w-11 h-11 bg-gray-800 dark:bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-700 dark:hover:bg-gray-600 transition-all hover:scale-105">
+        <i class="fab fa-github text-lg text-white"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/sahrul-firdaus/" target="_blank" rel="noopener noreferrer" class="w-11 h-11 bg-gray-800 dark:bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-all hover:scale-105">
+        <i class="fab fa-linkedin text-lg text-white"></i>
+      </a>
+      <a href="mailto:muhammadsyahrulfirdaus22@gmail.com" class="w-11 h-11 bg-gray-800 dark:bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-all hover:scale-105">
+        <i class="fas fa-envelope text-lg text-white"></i>
+      </a>
+      <a href="https://wa.me/62089527509633" target="_blank" rel="noopener noreferrer" class="w-11 h-11 bg-gray-800 dark:bg-gray-700 rounded-full flex items-center justify-center hover:bg-green-600 dark:hover:bg-green-500 transition-all hover:scale-105">
+        <i class="fab fa-whatsapp text-lg text-white"></i>
+      </a>
+     </div>
      </div>
      <p class="text-gray-500 text-sm" data-en="© 2024 Sahrul Firdaus. Available for internship opportunities." data-id="© 2024 Sahrul Firdaus. Tersedia untuk peluang magang.">© 2024 Sahrul Firdaus. Available for internship opportunities.</p>
     </div>
