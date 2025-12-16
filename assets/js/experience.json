@@ -1,0 +1,47 @@
+
+[
+  {
+    "titleId": "Proyek Analisis Data Lanjutan",
+    "period": "2024",
+    "items": [
+      "Built 3 comprehensive data analysis projects with real-world datasets",
+      "Implemented time series forecasting using Prophet algorithm",
+      "Created interactive dashboards with Streamlit for data visualization"
+    ],
+    "itemsId": [
+      "Membangun 3 proyek analisis data komprehensif dengan dataset dunia nyata",
+      "Mengimplementasikan forecasting time series menggunakan algoritma Prophet",
+      "Membuat dashboard interaktif dengan Streamlit untuk visualisasi data"
+    ]
+  },
+  {
+    "title": "Machine Learning Fundamentals",
+    "titleId": "Fundamental Machine Learning",
+    "period": "2023-2024",
+    "items": [
+      "Mastered supervised and unsupervised learning algorithms",
+      "Applied regression, classification, and clustering techniques",
+      "Developed predictive models with 85%+ accuracy rates"
+    ],
+    "itemsId": [
+      "Menguasai algoritma supervised dan unsupervised learning",
+      "Menerapkan teknik regresi, klasifikasi, dan clustering",
+      "Mengembangkan model prediktif dengan akurasi 85%+"
+    ]
+  },
+  {
+    "title": "Data Visualization Mastery",
+    "titleId": "Penguasaan Visualisasi Data",
+    "period": "2023",
+    "items": [
+      "Created compelling data stories using Matplotlib, Seaborn, and Plotly",
+      "Designed dashboards following best practices in data visualization",
+      "Transformed complex data into actionable insights for stakeholders"
+    ],
+    "itemsId": [
+      "Membuat cerita data yang menarik menggunakan Matplotlib, Seaborn, dan Plotly",
+      "Mendesain dashboard mengikuti best practices dalam visualisasi data",
+      "Mengubah data kompleks menjadi insight yang actionable untuk stakeholder"
+    ]
+  }
+]
